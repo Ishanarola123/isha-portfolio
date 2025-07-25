@@ -1,0 +1,199 @@
+{
+  "personalInfo": {
+    "name": "Isha Narola",
+    "title": "Senior Software Engineer",
+    "email": "ishanarola123@gmail.com",
+    "phone": "9328778840",
+    "address": "81-Akshardham Society-2, Ambatalavadi, Surat, Gujarat, India",
+    "linkedin": "https://www.linkedin.com/in/isha-narola-390265237",
+    "github": "https://github.com/Ishanarola123",
+    "summary": "Experienced Senior Software Engineer with 2.5+ years of expertise in ReactJS and NextJS development. Proven track record of building scalable web applications with modern JavaScript frameworks, state management solutions, and RESTful API integrations. Strong background in full-stack development with excellent problem-solving skills and ability to work independently or as part of a team."
+  },
+  "skills": {
+    "frontend": ["ReactJS", "NextJS", "JavaScript", "TypeScript", "HTML5", "CSS3", "Bootstrap5", "Material-UI", "Tailwind CSS", "Radix UI"],
+    "stateManagement": ["Redux", "Context API", "Zustand", "React ToolKit Query"],
+    "tools": ["AWS Amplify", "AWS Cognito","Firebase" ,"Git", "BitBucket", "VS Code", "Sublime Text"],
+    "testing": ["JEST", "SWR"],
+    "other": [ "REST APIs", "C", "Core Java", "Problem Solving"],
+    "os": ["macOS", "Windows 10"]
+  },
+  "experience": {
+    "company": "Narola Infotech Solutions LLP",
+    "position": "Senior Software Engineer",
+    "duration": "January 2021 - Present",
+    "responsibilities": [
+      "Developed scalable web applications using ReactJS and NextJS",
+      "Implemented state management solutions with Redux and Context API",
+      "Built responsive UI components with modern design systems",
+      "Integrated RESTful APIs and real-time data solutions",
+      "Collaborated with cross-functional teams in agile environments"
+    ],
+    "achievements": [
+      "Successfully delivered 4+ major projects",
+      "Implemented AWS cloud solutions with 99.9% uptime",
+      "Built applications serving 10,000+ users",
+      "Mentored junior developers and led code reviews"
+    ]
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "ESAI Work",
+      "company": "Narola Infotech Solutions LLP",
+      "teamSize": 3,
+      "technologies": ["ReactJS", "Context API", "TypeScript", "NodeJS", "MongoDB"],
+      "description": "Comprehensive administrative web application with advanced data visualization capabilities",
+      "features": [
+        "Dual UI interfaces for external and internal users with role-based access control",
+        "Dynamic reporting system with multi-feature tables supporting search, filtering, sorting, and data export",
+        "Built responsive UI components from Figma designs with multilingual support (English & Japanese)",
+        "User Role Management System",
+        "Advanced Search and Filtering Mechanisms",
+        "Excel Data Export Functionality",
+        "Candidate Profile Management",
+        "Multi-language Localization"
+      ],
+      "status": "Completed",
+      "duration": "2023-2024"
+    },
+    {
+      "id": 2,
+      "title": "RECOUPLE",
+      "company": "Narola Infotech Solutions LLP",
+      "teamSize": 3,
+      "technologies": ["ReactJS", "Zustand", "SWR", "JEST", "AWS Amplify", "Cognito", "NodeJS", "MySQL", "Docker"],
+      "liveUrl": "app.recouple.au",
+      "stageUrl": "uat.2xe.au",
+      "description": "Energy management and data visualization platform for organizational metrics",
+      "features": [
+        "Implemented AWS Cognito authentication with multi-factor authentication (MFA) including Google integration",
+        "Developed complex contract management system with date validation and overlap prevention",
+        "Built dynamic resource management with emission factors and economic life calculations",
+        "Profile Dashboard with Data Records Management",
+        "Scenario Planning with Target and Opportunity Management",
+        "Project Management with Revenue Tracking",
+        "Comprehensive Settings Panel with User/Permission Management",
+        "Site Management with GPS-based Asset Tracking"
+      ],
+      "status": "Live",
+      "duration": "2023"
+    },
+    {
+      "id": 3,
+      "title": "Shipnavi",
+      "company": "Narola Infotech Solutions LLP",
+      "teamSize": 3,
+      "technologies": ["ReactJS", "TypeScript", "NextJS", "Redux", "React Query", "Tailwind CSS", "Radix UI", "NodeJS"],
+      "liveUrl": "shipnavi.com",
+      "description": "Full-featured e-commerce platform with bidding functionality",
+      "features": [
+        "Developed comprehensive product management system with variants and categories",
+        "Built secure checkout process with multiple payment and shipping options",
+        "Created user authentication system with wishlist and purchase history tracking",
+        "Optimized for performance, browser compatibility, and responsive design",
+        "Implemented bidding functionality for products"
+      ],
+      "status": "Live",
+      "duration": "2022-2023"
+    },
+    {
+      "id": 4,
+      "title": "Techeeta",
+      "company": "Narola Infotech Solutions LLP",
+      "teamSize": 3,
+      "technologies": ["ReactJS", "TypeScript", "NextJS", "Redux", "React Query", "Material UI", "CSS", "Firebase", "Socket", "D3 Chart"],
+      "liveUrl": "techeeta.com",
+      "description": "Game analytics platform with real-time sensor data integration",
+      "features": [
+        "Real time Data handler based on socket - Insider Cloud",
+        "Intense & inspirit based sensor connection",
+        "Assign sensor to player and Get real time data based on device",
+        "Create various tracker such as Replay, Football tracker, performance, Distance tracker",
+        "Trends analysis as well as heart rate monitoring",
+        "Login with firebase with verify email address",
+        "Performance analysis such as chart overview",
+        "Multi-language Localization",
+        "Sessions management for all teams",
+        "Heart Rate tracker, Distance tracker implement based on live data",
+        "Football tracker based on each player's position with the time range"
+      ],
+      "status": "In Development",
+      "duration": "2024-Present"
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor of Engineering (Information Technology)",
+      "institution": "Sarvajanik College of Engineering & Technology (SCET), Surat",
+      "university": "Gujarat Technical University",
+      "duration": "2019-2023",
+      "cgpa": "9.63/10",
+      "score": "Gold Medalist in Scet BE IT"
+    },
+    {
+      "degree": "Higher Secondary Certificate (HSC)",
+      "institution": "Gujarat Higher Secondary Education Board",
+      "duration": "2019",
+      "score": "81.00% (Merit in three main subjects: 86%)"
+    },
+    {
+      "degree": "Secondary School Certificate (SSC)",
+      "institution": "Gujarat Secondary Education Board",
+      "duration": "2017",
+      "score": "89.33%"
+    }
+  ],
+  "certifications": [
+    {
+      "category": "Technical Certifications",
+      "items": [
+        "C Language Certification - Santa Cruz, California",
+        "Android App Development Course - Great Learning",
+        "Android Nought Mobile Apps Training - EDUCBA",
+        "React Js HackerRank",
+        "Javascript HackerRank"
+      ]
+    },
+    {
+      "category": "Competition Achievements",
+      "items": [
+        "2nd Position - WYSWYG Web Designing, Techfest Converse 2021 (State Level)",
+        "1st Position - Story Writing Competition (Intra-college Level)",
+        "1st Position - Interschool Essay Competition, Sharadayatan School",
+        "Consolation Prize - Interschool Creative Educational Material Competition, Vanita Vishram"
+      ]
+    },
+    {
+      "category": "Hackathons & Contests",
+      "items": [
+        "TechPrexa 2022 Hackathon - Dronacharya College of Engineering & GeeksForGeeks",
+        "App Coding Contest - IIT Hyderabad",
+        "TCS CodeVita Programming Contest",
+        "Newton's Coding Challenges",
+        "National Level Talent Search Examination - JCI India"
+      ]
+    }
+  ],
+  "internships": [
+    {
+      "company": "Exposys Data Labs",
+      "position": "Software Developer Intern",
+      "description": "Gained hands-on experience in software development practices and methodologies"
+    },
+    {
+      "company": "VPN Infotech",
+      "position": "Android Developer Intern (Summer Internship)",
+      "description": "Developed Android applications using Java and Android Studio. Learned mobile app development lifecycle and best practices"
+    }
+  ],
+  "academicProjects": [
+    {
+      "title": "Gift Recommendation Website",
+      "description": "Developed a collaborative web platform with a team of 5 members. Created recommendation engine for gift suggestions based on relationships. Implemented user-friendly interface for easy gift discovery and selection."
+    },
+    {
+      "title": "ExamPaper Management System",
+      "description": "Built digital repository for exam question papers with permanent database storage. Developed categorization system by subject, exam type, branch, and semester. Enabled easy upload and retrieval functionality for faculty and students."
+    }
+  ]
+}

@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
             </div>
             
             <p className="text-gray-400 text-sm">
-              © {currentYear} Isha Narola. All rights reserved.
+              © {currentYear} Isha Narola. All rights reserved. 
             </p>
           </div>
         </div>

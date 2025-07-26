@@ -1,6 +1,6 @@
-import React from 'react';
-import { Mail, Phone, MapPin, Linkedin, Github, Send } from 'lucide-react';
-import { PersonalInfo } from '../types';
+import React from "react";
+import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
+import { PersonalInfo } from "../types";
 
 interface ContactProps {
   personalInfo: PersonalInfo;
@@ -15,7 +15,8 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
             Get In Touch
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-400 max-w-2xl mx-auto">
-            Let's discuss opportunities to work together. I'm always interested in new projects and collaborations.
+            Let&apos;s discuss opportunities to work together. I&apos;m always
+            interested in new projects and collaborations.
           </p>
         </div>
 
@@ -25,9 +26,9 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Contact Information
             </h3>
-            
+
             <div className="space-y-4">
-              <a 
+              <a
                 href={`mailto:${personalInfo.email}`}
                 className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 group"
               >
@@ -35,8 +36,12 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                   <Mail className="w-6 h-6 text-blue-600 dark:text-blue-400" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900 dark:text-white">Email</p>
-                  <p className="text-gray-600 dark:text-gray-400">{personalInfo.email}</p>
+                  <p className="font-medium text-gray-900 dark:text-white">
+                    Email
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {personalInfo.email}
+                  </p>
                 </div>
               </a>
 
@@ -45,8 +50,12 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                   <Phone className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900 dark:text-white">Phone</p>
-                  <p className="text-gray-600 dark:text-gray-400">{personalInfo.phone}</p>
+                  <p className="font-medium text-gray-900 dark:text-white">
+                    Phone
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    {personalInfo.phone}
+                  </p>
                 </div>
               </div>
 
@@ -55,8 +64,12 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                   <MapPin className="w-6 h-6 text-purple-600 dark:text-purple-400" />
                 </div>
                 <div>
-                  <p className="font-medium text-gray-900 dark:text-white">Location</p>
-                  <p className="text-gray-600 dark:text-gray-400">Surat, Gujarat, India</p>
+                  <p className="font-medium text-gray-900 dark:text-white">
+                    Location
+                  </p>
+                  <p className="text-gray-600 dark:text-gray-400">
+                    Surat, Gujarat, India
+                  </p>
                 </div>
               </div>
             </div>
@@ -86,7 +99,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               Send Message
             </h3>
-            
+
             <form className="space-y-6">
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -98,7 +111,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                   placeholder="Enter your name"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your Email
@@ -109,7 +122,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                   placeholder="Enter your email"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Subject
@@ -120,7 +133,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                   placeholder="Enter subject"
                 />
               </div>
-              
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Message
@@ -131,7 +144,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                   placeholder="Enter your message"
                 ></textarea>
               </div>
-              
+
               <button
                 type="submit"
                 className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 font-medium"

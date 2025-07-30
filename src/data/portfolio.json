@@ -12,7 +12,7 @@
   "skills": {
     "frontend": ["ReactJS", "NextJS", "JavaScript", "TypeScript", "HTML5", "CSS3", "Bootstrap5", "Material-UI", "Tailwind CSS", "Radix UI"],
     "stateManagement": ["Redux", "Context API", "Zustand", "React ToolKit Query"],
-    "tools": ["AWS Amplify", "AWS Cognito","Firebase" ,"Git", "BitBucket", "VS Code", "Sublime Text"],
+    "tools": ["AWS Amplify", "AWS Cognito","Firebase" ,"Git", "BitBucket", "Click up", "Trello", "VS Code", "Sublime Text"],
     "testing": ["JEST", "SWR"],
     "other": [ "REST APIs", "C", "Core Java", "Problem Solving"],
     "os": ["macOS", "Windows 10"]
@@ -143,22 +143,48 @@
       "score": "89.33%"
     }
   ],
-  "certifications": [
+    "certifications": [
     {
       "category": "Technical Certifications",
       "items": [
-        "C Language Certification - Santa Cruz, California",
-        "Android App Development Course - Great Learning",
-        "Android Nought Mobile Apps Training - EDUCBA",
-        "React Js HackerRank",
-        "Javascript HackerRank"
+        {
+          "name": "C Language Certification - Santa Cruz, California",
+          "image": "https://your-cloud-storage.com/c-language-cert.jpg",
+          "link": "https://verify-certificate.com/c-lang-123"
+        },
+        {
+          "name": "Android App Development Course - Great Learning",
+          "image": "https://your-cloud-storage.com/android-cert.jpg",
+          "link": "https://greatlearning.com/verify/android-123"
+        },
+        {
+          "name": "Android Nought Mobile Apps Training - EDUCBA",
+          "image": "https://your-cloud-storage.com/educba-cert.jpg",
+          "link": "https://educba.com/verify/android-456"
+        },
+        {
+          "name": "React Js HackerRank",
+          "image": "https://your-cloud-storage.com/react-hackerrank.jpg",
+          "link": "https://hackerrank.com/certificates/react-789"
+        },
+        {
+          "name": "Javascript HackerRank",
+          "image": "https://your-cloud-storage.com/js-hackerrank.jpg",
+          "link": "https://hackerrank.com/certificates/javascript-101"
+        }
       ]
     },
     {
       "category": "Competition Achievements",
       "items": [
-        "2nd Position - WYSWYG Web Designing, Techfest Converse 2021 (State Level)",
-        "1st Position - Story Writing Competition (Intra-college Level)",
+        {
+          "name": "2nd Position - WYSWYG Web Designing, Techfest Converse 2021 (State Level)",
+          "image": "https://your-cloud-storage.com/techfest-2021.jpg"
+        },
+        {
+          "name": "1st Position - Story Writing Competition (Intra-college Level)",
+          "image": "https://your-cloud-storage.com/story-writing.jpg"
+        },
         "1st Position - Interschool Essay Competition, Sharadayatan School",
         "Consolation Prize - Interschool Creative Educational Material Competition, Vanita Vishram"
       ]
@@ -166,7 +192,11 @@
     {
       "category": "Hackathons & Contests",
       "items": [
-        "TechPrexa 2022 Hackathon - Dronacharya College of Engineering & GeeksForGeeks",
+        {
+          "name": "TechPrexa 2022 Hackathon - Dronacharya College of Engineering & GeeksForGeeks",
+          "image": "https://your-cloud-storage.com/techprexa-2022.jpg",
+          "link": "https://techprexa.com/hackathon-2022"
+        },
         "App Coding Contest - IIT Hyderabad",
         "TCS CodeVita Programming Contest",
         "Newton's Coding Challenges",

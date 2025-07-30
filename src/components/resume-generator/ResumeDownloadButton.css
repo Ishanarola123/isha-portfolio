@@ -1,0 +1,166 @@
+/* ResumeDownloadButton.css */
+
+.resume-download-mobile,
+.resume-download-desktop {
+  position: relative;
+  display: inline-block;
+}
+
+/* Mobile Button */
+.mobile-download-btn {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  color: #61789d; /* Default gray for light mode */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease-in-out;
+}
+
+/* Dark mode for mobile button */
+.dark .mobile-download-btn {
+  color: #d1d5db; /* Lighter gray for dark mode */
+}
+
+.mobile-download-btn:hover {
+  background-color: #e5e7eb; /* Light gray on hover */
+}
+
+/* Dark mode hover for mobile button */
+.dark .mobile-download-btn:hover {
+  background-color: #374151; /* Darker gray on hover */
+}
+
+.mobile-download-btn .download-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+/* Desktop Button */
+.desktop-download-btn {
+  background-color: #2563eb; /* Blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 600;
+  transition: background-color 0.3s ease-in-out;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.desktop-download-btn:hover {
+  background-color: #1d4ed8; /* Slightly darker blue on hover */
+}
+
+.desktop-download-btn .download-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+.desktop-download-btn .chevron-icon {
+  width: 1rem;
+  height: 1rem;
+  transition: transform 0.3s ease-in-out;
+}
+
+.desktop-download-btn .chevron-icon.rotated {
+  transform: rotate(180deg);
+}
+
+/* Dropdown common styles */
+.mobile-dropdown,
+.desktop-dropdown {
+  position: absolute;
+  background-color: #ffffff; /* White background */
+  border: 1px solid #e5e7eb; /* Light gray border */
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 100;
+  min-width: 180px; /* Adjust as needed */
+}
+
+/* Dark mode for dropdowns */
+.dark .mobile-dropdown,
+.dark .desktop-dropdown {
+  background-color: #1f2937; /* Darker background */
+  border-color: #374151; /* Darker border */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.desktop-dropdown {
+  top: calc(100% + 0.5rem); /* Position below the button */
+  right: 0; /* Align to the right of the button */
+}
+
+.mobile-dropdown {
+  top: calc(100% + 0.5rem);
+  right: 0;
+}
+
+.dropdown-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.dropdown-item:hover {
+  background-color: #e0f2fe; /* Light blue on hover */
+}
+
+/* Dark mode hover for dropdown items */
+.dark .dropdown-item:hover {
+  background-color: #1e3a8a; /* Darker blue on hover */
+}
+
+.dropdown-item .file-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: 0.75rem;
+}
+
+.dropdown-item .pdf-icon {
+  color: #ef4444; /* Red for PDF */
+}
+
+.dropdown-item .docx-icon {
+  color: #3b82f6; /* Blue for DOCX */
+}
+
+.dropdown-item .item-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown-item .item-title {
+  font-weight: 500;
+  color: #111827; /* Dark text for light mode */
+}
+
+/* Dark mode for dropdown item title */
+.dark .dropdown-item .item-title {
+  color: #ffffff; /* White text for dark mode */
+}
+
+.dropdown-item .item-subtitle {
+  font-size: 0.75rem;
+  color: #6b7280; /* Gray text for light mode */
+}
+
+/* Dark mode for dropdown item subtitle */
+.dark .dropdown-item .item-subtitle {
+  color: #9ca3af; /* Lighter gray text for dark mode */
+}

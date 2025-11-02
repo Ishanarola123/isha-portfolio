@@ -11,6 +11,7 @@ interface SkillBadgeProps {
   category: string;
 }
 
+
 const SkillBadge: React.FC<SkillBadgeProps> = ({ skill, category }) => {
   const getSkillIcon = (skill: string, category: string) => {
     if (
@@ -55,9 +56,21 @@ const SkillBadge: React.FC<SkillBadgeProps> = ({ skill, category }) => {
 };
 
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
-  const formatCategoryName = (category: string) => {
-    return category.replace(/([A-Z])/g, " $1").trim();
+const formatCategoryName = (category: string) => {
+  // Map of special category names
+  const specialNames: Record<string, string> = {
+    uiux: "UI/UX",
+    apiAndNetworking: "API & Networking",
+    androidDevelopment: "Android Development",
+    os: "Operating Systems",
   };
+
+  if (specialNames[category]) return specialNames[category];
+
+  // Default: split camelCase and capitalize words
+  return category.replace(/([A-Z])/g, " $1").replace(/\b\w/g, (c) => c.toUpperCase());
+};
+
 
   return (
     <section

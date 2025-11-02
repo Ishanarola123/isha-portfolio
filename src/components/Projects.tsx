@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useState} from 'react';
 import { ExternalLink, Users, Calendar } from 'lucide-react';
 import { Project } from '../types';
 
@@ -10,7 +10,10 @@ interface ProjectCardProps {
   project: Project;
 }
 
+
 const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
+  const [showAllFeatures, setShowAllFeatures] = useState(false);
+
   const getStatusColor = (status: string | undefined) => {
     switch (status) {
       case 'Live':
@@ -27,6 +30,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   return (
     <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
       <div className="p-6">
+        {/* Header */}
         <div className="flex justify-between items-start mb-4">
           <div>
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
@@ -36,9 +40,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </div>
           <div className="flex gap-2">
             {project.liveUrl && (
-              <a 
-                href={`${project.liveUrl}`} 
-                target="_blank" 
+              <a
+                href={project.liveUrl}
+                target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"
               >
@@ -47,9 +51,10 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             )}
           </div>
         </div>
-        
+
         <p className="text-gray-700 dark:text-gray-300 mb-4">{project.description}</p>
-        
+
+        {/* Project Info */}
         <div className="mb-4">
           <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-2">
             <span className="flex items-center gap-1">
@@ -66,23 +71,32 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           </span>
         </div>
 
+        {/* Features */}
         <div className="mb-4">
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Key Features:</h4>
           <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-            {project.features.slice(0, 3).map((feature, index) => (
+            {(showAllFeatures ? project.features : project.features.slice(0, 3)).map((feature, index) => (
               <li key={index} className="flex items-start gap-2">
                 <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
                 {feature}
               </li>
             ))}
             {project.features.length > 3 && (
-              <li className="text-blue-600 dark:text-blue-400 text-xs">
-                +{project.features.length - 3} more features
+              <li>
+                <button
+                  onClick={() => setShowAllFeatures(!showAllFeatures)}
+                  className="text-blue-600 dark:text-blue-400 text-xs underline hover:text-blue-800 dark:hover:text-blue-300"
+                >
+                  {showAllFeatures
+                    ? 'Show less'
+                    : `+${project.features.length - 3} more features`}
+                </button>
               </li>
             )}
           </ul>
         </div>
 
+        {/* Technologies */}
         <div>
           <h4 className="font-semibold text-gray-900 dark:text-white mb-2">Technologies:</h4>
           <div className="flex flex-wrap gap-2">
@@ -97,6 +111,8 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
     </div>
   );
 };
+
+
 
 const Projects: React.FC<ProjectsProps> = ({ projects }) => {
   return (

@@ -9,7 +9,7 @@ export const metadata: Metadata = {
   description:
     "Android Developer with 2+ years of experience in building efficient, user-friendly, and scalable mobile applications using Java, XML, and Firebase. Skilled in Android Studio, Retrofit, and Material Design.",
   keywords:
-    "Akshay J Vadchhak, Android Developer, Java, Android Studio, Mobile App Developer, Firebase, Retrofit, SQLite, Material Design, MVVM, Surat, Gujarat",
+    "Akshay J Vadchhak, Android Developer, Java, Android Studio, Mobile App Developer, Firebase, Retrofit, SQLite, Material Design, MVM, Surat, Gujarat",
   authors: [{ name: "Akshay J Vadchhak" }],
   creator: "Akshay J Vadchhak",
   openGraph: {

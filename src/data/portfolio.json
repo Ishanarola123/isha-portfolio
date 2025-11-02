@@ -7,7 +7,7 @@
     "address": "170-Mohandip Society-11, Ambatalavadi, Surat, Gujarat, India",
     "linkedin": "https://www.linkedin.com/in/akshay-vadchhak-936b9920a/",
     "github": "",
-    "summary": "Experienced Team Leader and Senior Android Engineer with 4+ years of expertise in native Android application development. Since February 2025, serving as a Team Leader, leading end-to-end Android projects and mentoring developers to deliver high-quality, scalable solutions. Proven track record in building high-performance mobile applications using Java, Android SDK, and modern architectural patterns such as MVVM and Clean Architecture. Skilled in integrating RESTful APIs, managing local databases (Room, SQLite), and optimizing app performance and UI/UX. Strong background in full-cycle Android development—from concept to deployment—with excellent problem-solving abilities, leadership skills, and a collaborative mindset."
+    "summary": "Experienced Team Leader and Senior Android Engineer with 4+ years of expertise in native Android application development. Since February 2025, serving as a Team Leader, leading end-to-end Android projects and mentoring developers to deliver high-quality, scalable solutions. Proven track record in building high-performance mobile applications using Java, Android SDK, and modern architectural patterns such as MVM and Clean Architecture. Skilled in integrating RESTful APIs, managing local databases (Room, SQLite), and optimizing app performance and UI/UX. Strong background in full-cycle Android development—from concept to deployment—with excellent problem-solving abilities, leadership skills, and a collaborative mindset."
   },
   "skills": {
     "languages": ["Java", "Kotlin", "XML", "C", "SQL"],
@@ -23,7 +23,7 @@
       "RecyclerView",
       "ConstraintLayout"
     ],
-    "architecture": ["MVVM", "MVP", "Clean Architecture"],
+    "architecture": ["MVM", "MVP", "Clean Architecture"],
     "apiAndNetworking": [
       "RESTful APIs",
       "Retrofit",
@@ -37,8 +37,6 @@
       "Bitbucket",
       "Firebase",
       "Postman",
-      "Jira",
-      "VS Code",
       "Android Debug Bridge (ADB)"
     ],
     "testing": ["JUnit", "Espresso", "Mockito"],
@@ -57,7 +55,7 @@
     "duration": "November 2021 - Present",
     "responsibilities": [
       "Developed and maintained scalable native Android applications using Java and Android SDK",
-      "Implemented clean architecture patterns such as MVVM and MVP for maintainable codebases",
+      "Implemented clean architecture patterns such as MVM and MVP for maintainable codebases",
       "Integrated RESTful APIs and handled data persistence using Room and SQLite",
       "Optimized app performance, memory usage, and battery efficiency",
       "Collaborated with designers and backend teams to deliver seamless user experiences",

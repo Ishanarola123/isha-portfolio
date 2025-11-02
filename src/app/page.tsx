@@ -11,9 +11,9 @@ import Certifications from '../components/Certifications';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
 import portfolioDataJson from '../data/portfolio.json';
-import {IPortfolioData } from "../types/portfolio"
+import { PortfolioData } from "../types/index"
 
-const portfolioData = portfolioDataJson as IPortfolioData;
+const portfolioData = portfolioDataJson as unknown as PortfolioData;
 
 
 export default function Home() {
@@ -102,10 +102,10 @@ export default function Home() {
         {portfolioData?.certifications?.length  && <Certifications
           certifications={portfolioData?.certifications}
         />}
-        
+{/*         
         <Contact
           personalInfo={portfolioData.personalInfo}
-        />
+        /> */}
       </main>
       
       <Footer />

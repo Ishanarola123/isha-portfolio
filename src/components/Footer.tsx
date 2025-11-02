@@ -47,11 +47,11 @@ const Footer: React.FC = () => {
                   Education
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a href="#certifications" className="hover:text-white transition-colors">
                   Certifications
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
 
@@ -68,7 +68,7 @@ const Footer: React.FC = () => {
       'Retrofit',
       'Material Design',
       'Git',
-      'MVVM Architecture'
+      'MVM Architecture'
     ].map((tech) => (
       <span
         key={tech}

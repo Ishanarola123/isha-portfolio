@@ -1,3 +1,5 @@
+import { Project, Skills } from "./index";
+
 export interface Certification {
   title: string;
   issuer?: string;
@@ -15,14 +17,7 @@ export interface IPortfolioData {
     github: string;
     summary: string;
   };
-  skills: {
-    languages: string[];
-    androidDevelopment: string[];
-    os: string[];
-  };
-  academicProjects: {
-    title: string;
-    description: string;
-  }[];
+  skills: Skills,
+  academicProjects: Project[];
   certifications?: Certification[];
 }

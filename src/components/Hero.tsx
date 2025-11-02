@@ -1,6 +1,7 @@
 import React from 'react';
 import { Mail, Phone, MapPin, Linkedin, Github } from 'lucide-react';
 import { PersonalInfo } from '../types';
+import { Email } from '@mui/icons-material';
 
 interface HeroProps {
   personalInfo: PersonalInfo;
@@ -62,6 +63,10 @@ const Hero: React.FC<HeroProps> = ({ personalInfo, isLoaded }) => {
             <div className="flex items-center gap-2">
               <Phone className="w-5 h-5" />
               {personalInfo.phone}
+            </div>
+             <div className="flex items-center gap-2">
+              <Email className="w-5 h-5" />
+              {personalInfo.email}
             </div>
             <div className="flex items-center gap-2">
               <MapPin className="w-5 h-5" />

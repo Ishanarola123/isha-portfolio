@@ -10,13 +10,17 @@ export interface PersonalInfo {
 }
 
 export interface Skills {
-  frontend: string[];
-  stateManagement: string[];
+  languages: string[];
+  androidDevelopment: string[];
+  architecture: string[];
+  apiAndNetworking: string[];
   tools: string[];
   testing: string[];
+  uiux: string[];
   other: string[];
   os: string[];
 }
+
 
 export interface Experience {
   company: string;
@@ -71,7 +75,7 @@ export interface PortfolioData {
   experience: Experience;
   projects: Project[];
   education: Education[];
-  certifications: CertificationCategory[];
+  certifications?: CertificationCategory[];
   internships: Internship[];
   academicProjects: AcademicProject[];
 }

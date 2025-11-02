@@ -63,12 +63,12 @@ const Header: React.FC<HeaderProps> = ({
               );
             })}
 
-            <div className="desktop-download-wrapper">
+            {/* <div className="desktop-download-wrapper">
               <ResumeDownloadButton
                 portfolioData={portfolioData}
                 isMobile={false}
               />
-            </div>
+            </div> */}
           </div>
 
           <div className="md:hidden flex items-center space-x-4 mobile-menu-button-wrapper">

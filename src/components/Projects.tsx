@@ -61,10 +61,13 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
               <Users className="w-4 h-4" />
               Team: {project.teamSize}
             </span>
-            <span className="flex items-center gap-1">
+            {
+              project.duration &&  <span className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
               {project.duration}
             </span>
+
+            }
           </div>
           <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(project.status)}`}>
             {project.status}

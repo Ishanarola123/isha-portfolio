@@ -5,27 +5,27 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Isha Narola - Senior Software Engineer",
+  title: "Akshay J Vadchhak - Android Developer (Java)",
   description:
-    "Senior Software Engineer with 2.5+ years of expertise in ReactJS and NextJS development. Experienced in building scalable web applications with modern JavaScript frameworks.",
+    "Android Developer with 2+ years of experience in building efficient, user-friendly, and scalable mobile applications using Java, XML, and Firebase. Skilled in Android Studio, Retrofit, and Material Design.",
   keywords:
-    "Isha Narola, Senior Software Engineer, ReactJS, NextJS, JavaScript, TypeScript, Full Stack Developer, Web Development, Gujarat, Surat",
-  authors: [{ name: "Isha Narola" }],
-  creator: "Isha Narola",
+    "Akshay J Vadchhak, Android Developer, Java, Android Studio, Mobile App Developer, Firebase, Retrofit, SQLite, Material Design, MVVM, Surat, Gujarat",
+  authors: [{ name: "Akshay J Vadchhak" }],
+  creator: "Akshay J Vadchhak",
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://isha-narola-portfolio.vercel.app",
-    title: "Isha Narola - Senior Software Engineer",
+    url: "https://akshay-portfolio.vercel.app",
+    title: "Akshay J Vadchhak - Android Developer (Java)",
     description:
-      "Senior Software Engineer specializing in ReactJS, NextJS, and modern web technologies.",
-    siteName: "Isha Narola Portfolio",
+      "Professional Android Developer specializing in Java, XML, and Firebase with a focus on clean architecture and optimized performance.",
+    siteName: "Akshay J Vadchhak Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Isha Narola - Senior Software Engineer",
+    title: "Akshay J Vadchhak - Android Developer (Java)",
     description:
-      "Senior Software Engineer specializing in ReactJS, NextJS, and modern web technologies.",
+      "Professional Android Developer specializing in Java, XML, and Firebase with a focus on clean architecture and optimized performance.",
   },
   robots: {
     index: true,

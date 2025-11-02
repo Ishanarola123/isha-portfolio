@@ -74,7 +74,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
               </div>
             </div>
 
-            <div className="flex gap-4 pt-6">
+            {/* <div className="flex gap-4 pt-6">
               <a
                 href={personalInfo.linkedin}
                 target="_blank"
@@ -91,7 +91,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
               >
                 <Github className="w-6 h-6" />
               </a>
-            </div>
+            </div> */}
           </div>
 
           {/* Contact Form */}

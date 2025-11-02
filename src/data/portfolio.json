@@ -1,182 +1,239 @@
 {
   "personalInfo": {
-    "name": "Isha Narola",
-    "title": "Senior Software Engineer",
-    "email": "ishanarola123@gmail.com",
-    "phone": "9328778840",
-    "address": "81-Akshardham Society-2, Ambatalavadi, Surat, Gujarat, India",
-    "linkedin": "https://www.linkedin.com/in/isha-narola-390265237",
-    "github": "https://github.com/Ishanarola123",
-    "summary": "Experienced Senior Software Engineer with 2.5+ years of expertise in ReactJS and NextJS development. Proven track record of building scalable web applications with modern JavaScript frameworks, state management solutions, and RESTful API integrations. Strong background in full-stack development with excellent problem-solving skills and ability to work independently or as part of a team."
+    "name": "Akshay Vadchhak",
+    "title": "Team Leader",
+    "email": "akshayvadchhak101@gmail.com",
+    "phone": "9574865235",
+    "address": "170-Mohandip Society-11, Ambatalavadi, Surat, Gujarat, India",
+    "linkedin": "https://www.linkedin.com/in/akshay-vadchhak-936b9920a/",
+    "github": "",
+    "summary": "Experienced Team Leader and Senior Android Engineer with 4+ years of expertise in native Android application development. Since February 2025, serving as a Team Leader, leading end-to-end Android projects and mentoring developers to deliver high-quality, scalable solutions. Proven track record in building high-performance mobile applications using Java, Android SDK, and modern architectural patterns such as MVVM and Clean Architecture. Skilled in integrating RESTful APIs, managing local databases (Room, SQLite), and optimizing app performance and UI/UX. Strong background in full-cycle Android development—from concept to deployment—with excellent problem-solving abilities, leadership skills, and a collaborative mindset."
   },
   "skills": {
-    "frontend": ["ReactJS", "NextJS", "JavaScript", "TypeScript", "HTML5", "CSS3", "Bootstrap5", "Material-UI", "Tailwind CSS", "Radix UI"],
-    "stateManagement": ["Redux", "Context API", "Zustand", "React ToolKit Query"],
-    "tools": ["AWS Amplify", "AWS Cognito","Firebase" ,"Git", "BitBucket", "VS Code", "Sublime Text"],
-    "testing": ["JEST", "SWR"],
-    "other": [ "REST APIs", "C", "Core Java", "Problem Solving"],
-    "os": ["macOS", "Windows 10"]
+    "languages": ["Java", "Kotlin", "XML", "C", "SQL"],
+    "androidDevelopment": [
+      "Android SDK",
+      "Android Studio",
+      "Gradle",
+      "Jetpack Components",
+      "Room Database",
+      "LiveData",
+      "ViewModel",
+      "Data Binding",
+      "RecyclerView",
+      "ConstraintLayout"
+    ],
+    "architecture": ["MVVM", "MVP", "Clean Architecture"],
+    "apiAndNetworking": [
+      "RESTful APIs",
+      "Retrofit",
+      "Volley",
+      "OkHttp",
+      "JSON",
+      "Gson"
+    ],
+    "tools": [
+      "Git",
+      "Bitbucket",
+      "Firebase",
+      "Postman",
+      "Jira",
+      "VS Code",
+      "Android Debug Bridge (ADB)"
+    ],
+    "testing": ["JUnit", "Espresso", "Mockito"],
+    "uiux": ["Material Design", "XML Layouts", "Custom Views", "Animations"],
+    "other": [
+      "Problem Solving",
+      "Performance Optimization",
+      "Play Store Deployment",
+      "Version Control"
+    ],
+    "os": ["Windows", "macOS", "Linux"]
   },
   "experience": {
-    "company": "Narola Infotech Solutions LLP",
+    "company": "Optimumbrew Technology",
     "position": "Senior Software Engineer",
-    "duration": "January 2021 - Present",
+    "duration": "November 2021 - Present",
     "responsibilities": [
-      "Developed scalable web applications using ReactJS and NextJS",
-      "Implemented state management solutions with Redux and Context API",
-      "Built responsive UI components with modern design systems",
-      "Integrated RESTful APIs and real-time data solutions",
-      "Collaborated with cross-functional teams in agile environments"
+      "Developed and maintained scalable native Android applications using Java and Android SDK",
+      "Implemented clean architecture patterns such as MVVM and MVP for maintainable codebases",
+      "Integrated RESTful APIs and handled data persistence using Room and SQLite",
+      "Optimized app performance, memory usage, and battery efficiency",
+      "Collaborated with designers and backend teams to deliver seamless user experiences",
+      "Published and maintained applications on the Google Play Store"
     ],
     "achievements": [
-      "Successfully delivered 4+ major projects",
-      "Implemented AWS cloud solutions with 99.9% uptime",
-      "Built applications serving 10,000+ users",
-      "Mentored junior developers and led code reviews"
+      "Successfully delivered 4+ major Android applications from concept to deployment",
+      "Improved app performance and load times by up to 30% through code optimization",
+      "Developed and maintained apps collectively serving over 20 million users with high ratings on the Play Store",
+      "Led code reviews, mentored junior developers, and ensured adherence to best practices",
+      "Implemented CI/CD pipelines and automated builds using Gradle and Firebase tools"
     ]
   },
   "projects": [
-    {
-      "id": 1,
-      "title": "ESAI Work",
-      "company": "Narola Infotech Solutions LLP",
-      "teamSize": 3,
-      "technologies": ["ReactJS", "Context API", "TypeScript", "NodeJS", "MongoDB"],
-      "description": "Comprehensive administrative web application with advanced data visualization capabilities",
-      "features": [
-        "Dual UI interfaces for external and internal users with role-based access control",
-        "Dynamic reporting system with multi-feature tables supporting search, filtering, sorting, and data export",
-        "Built responsive UI components from Figma designs with multilingual support (English & Japanese)",
-        "User Role Management System",
-        "Advanced Search and Filtering Mechanisms",
-        "Excel Data Export Functionality",
-        "Candidate Profile Management",
-        "Multi-language Localization"
-      ],
-      "status": "Completed",
-      "duration": "2023-2024"
-    },
-    {
-      "id": 2,
-      "title": "RECOUPLE",
-      "company": "Narola Infotech Solutions LLP",
-      "teamSize": 3,
-      "technologies": ["ReactJS", "Zustand", "SWR", "JEST", "AWS Amplify", "Cognito", "NodeJS", "MySQL", "Docker"],
-      "liveUrl": "app.recouple.au",
-      "stageUrl": "uat.2xe.au",
-      "description": "Energy management and data visualization platform for organizational metrics",
-      "features": [
-        "Implemented AWS Cognito authentication with multi-factor authentication (MFA) including Google integration",
-        "Developed complex contract management system with date validation and overlap prevention",
-        "Built dynamic resource management with emission factors and economic life calculations",
-        "Profile Dashboard with Data Records Management",
-        "Scenario Planning with Target and Opportunity Management",
-        "Project Management with Revenue Tracking",
-        "Comprehensive Settings Panel with User/Permission Management",
-        "Site Management with GPS-based Asset Tracking"
-      ],
-      "status": "Live",
-      "duration": "2023"
-    },
-    {
-      "id": 3,
-      "title": "Shipnavi",
-      "company": "Narola Infotech Solutions LLP",
-      "teamSize": 3,
-      "technologies": ["ReactJS", "TypeScript", "NextJS", "Redux", "React Query", "Tailwind CSS", "Radix UI", "NodeJS"],
-      "liveUrl": "shipnavi.com",
-      "description": "Full-featured e-commerce platform with bidding functionality",
-      "features": [
-        "Developed comprehensive product management system with variants and categories",
-        "Built secure checkout process with multiple payment and shipping options",
-        "Created user authentication system with wishlist and purchase history tracking",
-        "Optimized for performance, browser compatibility, and responsive design",
-        "Implemented bidding functionality for products"
-      ],
-      "status": "Live",
-      "duration": "2022-2023"
-    },
-    {
-      "id": 4,
-      "title": "Techeeta",
-      "company": "Narola Infotech Solutions LLP",
-      "teamSize": 3,
-      "technologies": ["ReactJS", "TypeScript", "NextJS", "Redux", "React Query", "Material UI", "CSS", "Firebase", "Socket", "D3 Chart"],
-      "liveUrl": "techeeta.com",
-      "description": "Game analytics platform with real-time sensor data integration",
-      "features": [
-        "Real time Data handler based on socket - Insider Cloud",
-        "Intense & inspirit based sensor connection",
-        "Assign sensor to player and Get real time data based on device",
-        "Create various tracker such as Replay, Football tracker, performance, Distance tracker",
-        "Trends analysis as well as heart rate monitoring",
-        "Login with firebase with verify email address",
-        "Performance analysis such as chart overview",
-        "Multi-language Localization",
-        "Sessions management for all teams",
-        "Heart Rate tracker, Distance tracker implement based on live data",
-        "Football tracker based on each player's position with the time range"
-      ],
-      "status": "In Development",
-      "duration": "2024-Present"
-    }
-  ],
+  {
+    "id": 1,
+    "title": "Flyerwiz",
+    "liveUrl": "https://play.google.com/store/apps/details?id=com.bg.flyermaker&hl=en",
+    "teamSize": 1,
+    "technologies": [
+      "Java",
+      "XML Layouts",
+      "Android SDK",
+      "Material Design Components",
+      "Firebase",
+      "SQLite",
+      "Room Database",
+      "RESTful APIs"
+    ],
+    "description": "Flyerwiz is a user-friendly and AI-powered flyer maker app that allows users to design professional-quality flyers, posters, banners, invitations, and social media graphics quickly and easily. The app includes over 30,000 customizable templates and AI-powered tools to simplify the design process.",
+    "features": [
+      "30,000+ ready-to-use templates for flyers, posters, banners, invitations, and social media graphics",
+      "Templates covering 200+ industries and 500+ events & festivals",
+      "Fully customizable with fonts, colors, stickers, backgrounds, shapes, and textures",
+      "AI Flyer Generator for instant flyer creation with smart suggestions",
+      "AI Background Remover for one-tap photo background replacement",
+      "AI Listicle Content Writer for automatic poster and ad text generation",
+      "Video Flyer Generation using Python-based API for animated content",
+      "QR Code Generator for scannable flyer interactions",
+      "Clickable links in exported PDFs for interactive digital sharing",
+      "Branding tools to add logos, brand colors, and custom styles",
+      "Export designs in multiple formats for print or digital use",
+      "Direct social media sharing support",
+      "Premium access to unlock all templates and AI tools"
+    ],
+    "responsibilities": [
+      "Gathered requirements and conducted brainstorming sessions",
+      "Developed responsive UI from Figma design using XML and Material Design",
+      "Implemented RESTful APIs with Volley and integrated backend services",
+      "Optimized code structure for better performance and scalability",
+      "Performed bug fixing and content verification before release"
+    ],
+    "status": "Live"
+  },
+  {
+    "id": 2,
+    "title": "1Invites",
+    "liveUrl": "https://play.google.com/store/apps/details?id=com.optimumbrewlab.invitationcardmaker&hl=en",
+    "teamSize": 3,
+    "technologies": [
+      "Java",
+      "XML Layouts",
+      "Android SDK",
+      "Material Design Components",
+      "Firebase",
+      "SQLite",
+      "Room Database",
+      "RESTful APIs"
+    ],
+    "description": "1Invites is a smart invitation and event management app offering over 20,000 customizable templates for weddings, birthdays, and corporate events. It simplifies event planning with RSVP tracking, guest list management, and interactive invitations.",
+    "features": [
+      "20,000+ ready-to-use invitation templates across multiple categories",
+      "Fully customizable designs with fonts, colors, stickers, frames, and backgrounds",
+      "RSVP and guest list management with event creation tools",
+      "Embedded smart PDF links for maps, websites, and gift registries",
+      "Export invitations via WhatsApp, email, and social media platforms",
+      "Reminder notifications for pending RSVPs",
+      "Simple and intuitive user flow for non-designers",
+      "Premium features for ad-free experience and advanced templates"
+    ],
+    "responsibilities": [
+      "Gathered requirements and collaborated in brainstorming sessions",
+      "Developed responsive UIs from Figma designs",
+      "Implemented REST APIs using Volley and integrated backend services",
+      "Optimized code structure for improved performance and maintainability"
+    ],
+    "status": "Live"
+  },
+  {
+    "id": 3,
+    "title": "AI Logo Generator, Logo Maker",
+    "liveUrl": "https://play.google.com/store/apps/details?id=com.bg.logomaker&hl=en",
+    "teamSize": 2,
+    "technologies": [
+      "Java",
+      "XML Layouts",
+      "Android SDK",
+      "Material Design Components",
+      "Firebase",
+      "SQLite",
+      "Room Database",
+      "RESTful APIs"
+    ],
+    "description": "AI Logo Generator (Logowiz) is an intuitive logo creation app that empowers users to design professional, scalable vector logos with ease. It includes a rich library of templates, customizable elements, and SVG export capabilities for digital and print-ready outputs.",
+    "features": [
+      "Customizable logo templates with fonts, colors, icons, and decorative elements",
+      "SVG export for high-quality scalable vector logos",
+      "Save and export designs in multiple formats for print or digital use",
+      "Share directly to social media, email, or messaging apps",
+      "User-friendly interface suitable for both beginners and professionals"
+    ],
+    "responsibilities": [
+      "Gathered requirements and participated in brainstorming sessions",
+      "Developed responsive UIs from Figma designs using XML layouts",
+      "Implemented RESTful APIs using Volley",
+      "Integrated backend services with Firebase and SQLite",
+      "Optimized code structure for performance and maintainability"
+    ],
+    "status": "Live"
+  },
+  {
+    "id": 4,
+    "title": "Brochure Maker, Pamphlet Maker",
+    "liveUrl": "https://play.google.com/store/apps/details?id=com.bg.brochuremaker&hl=en",
+    "teamSize": 2,
+    "technologies": [
+      "Java",
+      "XML Layouts",
+      "Android SDK",
+      "Material Design Components",
+      "Firebase",
+      "SQLite",
+      "Room Database",
+      "RESTful APIs"
+    ],
+    "description": "Brochure & Pamphlet Maker is a user-friendly Android app designed for creating professional brochures and pamphlets quickly and easily. It offers customizable templates and design tools, enabling users to create high-quality promotional materials without prior design experience.",
+    "features": [
+      "Pre-designed brochure and pamphlet templates",
+      "Customizable layouts with text, images, and graphics",
+      "Export designs for print or digital use",
+      "Easy-to-use and responsive user interface"
+    ],
+    "responsibilities": [
+      "Gathered requirements and contributed to brainstorming sessions",
+      "Redesigned UI from Figma layouts to improve usability",
+      "Integrated backend services and optimized application performance",
+      "Ensured responsive and visually appealing user experience"
+    ],
+    "status": "Live"
+  }
+],
   "education": [
     {
-      "degree": "Bachelor of Engineering (Information Technology)",
-      "institution": "Sarvajanik College of Engineering & Technology (SCET), Surat",
-      "university": "Gujarat Technical University",
-      "duration": "2019-2023",
-      "cgpa": "9.63/10",
-      "score": "Gold Medalist in Scet BE IT"
+      "degree": "Bachelor of Science (Information Technology)",
+      "institution": "Bhagwan Mahavir College Of Computer Application - BMCCA, Surat",
+      "university": "Bhagwan Mahavir University",
+      "duration": "2019-2022",
+      "cgpa": "8.12/10",
+      "score": ""
     },
     {
       "degree": "Higher Secondary Certificate (HSC)",
       "institution": "Gujarat Higher Secondary Education Board",
       "duration": "2019",
-      "score": "81.00% (Merit in three main subjects: 86%)"
+      "score": ""
     },
     {
       "degree": "Secondary School Certificate (SSC)",
       "institution": "Gujarat Secondary Education Board",
       "duration": "2017",
-      "score": "89.33%"
-    }
-  ],
-  "certifications": [
-    {
-      "category": "Technical Certifications",
-      "items": [
-        "C Language Certification - Santa Cruz, California",
-        "Android App Development Course - Great Learning",
-        "Android Nought Mobile Apps Training - EDUCBA",
-        "React Js HackerRank",
-        "Javascript HackerRank"
-      ]
-    },
-    {
-      "category": "Competition Achievements",
-      "items": [
-        "2nd Position - WYSWYG Web Designing, Techfest Converse 2021 (State Level)",
-        "1st Position - Story Writing Competition (Intra-college Level)",
-        "1st Position - Interschool Essay Competition, Sharadayatan School",
-        "Consolation Prize - Interschool Creative Educational Material Competition, Vanita Vishram"
-      ]
-    },
-    {
-      "category": "Hackathons & Contests",
-      "items": [
-        "TechPrexa 2022 Hackathon - Dronacharya College of Engineering & GeeksForGeeks",
-        "App Coding Contest - IIT Hyderabad",
-        "TCS CodeVita Programming Contest",
-        "Newton's Coding Challenges",
-        "National Level Talent Search Examination - JCI India"
-      ]
+      "score": ""
     }
   ],
   "internships": [
     {
-      "company": "Exposys Data Labs",
+      "company": "Optimumbrew Technology",
       "position": "Software Developer Intern",
       "description": "Gained hands-on experience in software development practices and methodologies"
     },

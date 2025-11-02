@@ -37,7 +37,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
           <div className="flex gap-2">
             {project.liveUrl && (
               <a 
-                href={`https://${project.liveUrl}`} 
+                href={`${project.liveUrl}`} 
                 target="_blank" 
                 rel="noopener noreferrer"
                 className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"

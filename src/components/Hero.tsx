@@ -47,7 +47,7 @@ const Hero: React.FC<HeroProps> = ({ personalInfo, isLoaded }) => {
               LinkedIn
             </a>
             
-            <a 
+            {personalInfo.github && <a 
               href={personalInfo.github} 
               target="_blank" 
               rel="noopener noreferrer" 
@@ -55,7 +55,7 @@ const Hero: React.FC<HeroProps> = ({ personalInfo, isLoaded }) => {
             >
               <Github className="w-5 h-5" />
               GitHub
-            </a>
+            </a> } 
           </div>
 
           <div className="flex flex-wrap justify-center gap-6 text-gray-600 dark:text-gray-400">

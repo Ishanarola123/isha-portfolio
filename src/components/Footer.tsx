@@ -10,11 +10,12 @@ const Footer: React.FC = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* About Section */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Isha Narola</h3>
+            <h3 className="text-xl font-bold mb-4">Akshay Vadchhak</h3>
             <p className="text-gray-400 leading-relaxed">
-              Senior Software Engineer passionate about creating scalable web applications 
-              with modern technologies and delivering exceptional user experiences.
-            </p>
+  Android Developer passionate about building efficient, user-friendly mobile applications
+  using Java, XML, and Firebase — focused on clean architecture, performance, and great user experiences.
+</p>
+
           </div>
 
           {/* Quick Links */}
@@ -56,18 +57,29 @@ const Footer: React.FC = () => {
 
           {/* Skills Summary */}
           <div>
-            <h3 className="text-xl font-bold mb-4">Core Technologies</h3>
-            <div className="flex flex-wrap gap-2">
-              {['ReactJS', 'NextJS', 'TypeScript', 'Node.js', 'AWS', 'MongoDB'].map((tech) => (
-                <span
-                  key={tech}
-                  className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm"
-                >
-                  {tech}
-                </span>
-              ))}
-            </div>
-          </div>
+  <h3 className="text-xl font-bold mb-4">Core Technologies</h3>
+  <div className="flex flex-wrap gap-2">
+    {[
+      'Android Studio',
+      'Java',
+      'XML',
+      'Firebase',
+      'SQLite',
+      'Retrofit',
+      'Material Design',
+      'Git',
+      'MVVM Architecture'
+    ].map((tech) => (
+      <span
+        key={tech}
+        className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm"
+      >
+        {tech}
+      </span>
+    ))}
+  </div>
+</div>
+
         </div>
 
         <div className="border-t border-gray-800 mt-8 pt-8">
@@ -77,11 +89,11 @@ const Footer: React.FC = () => {
               <Heart className="w-4 h-4 text-red-500" fill="currentColor" />
               <span>and</span>
               <Code className="w-4 h-4 text-blue-500" />
-              <span>by Isha Narola</span>
+              <span>by Akshay Vadchhak</span>
             </div>
             
             <p className="text-gray-400 text-sm">
-              © {currentYear} Isha Narola. All rights reserved. 
+              © {currentYear} Akshay Vadchhak. All rights reserved. 
             </p>
           </div>
         </div>

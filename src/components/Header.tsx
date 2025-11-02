@@ -32,7 +32,7 @@ const Header: React.FC<HeaderProps> = ({
     { id: "experience", label: "Experience", icon: Briefcase },
     { id: "projects", label: "Projects", icon: Database },
     { id: "education", label: "Education", icon: GraduationCap },
-    { id: "certifications", label: "Certifications", icon: Award },
+    // { id: "certifications", label: "Certifications", icon: Award },
   ];
 
   return (
@@ -40,7 +40,7 @@ const Header: React.FC<HeaderProps> = ({
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <div className="text-xl font-bold text-gray-900 dark:text-white">
-            Isha Narola
+            Akshay Vadchhak
           </div>
 
           {/* Desktop Navigation */}

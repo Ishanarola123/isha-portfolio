@@ -10,7 +10,11 @@ import Education from '../components/Education';
 import Certifications from '../components/Certifications';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
-import portfolioData from '../data/portfolio.json';
+import portfolioDataJson from '../data/portfolio.json';
+import {IPortfolioData } from "../types/portfolio"
+
+const portfolioData = portfolioDataJson as IPortfolioData;
+
 
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
@@ -94,10 +98,10 @@ export default function Home() {
         <Education
           education={portfolioData.education}
         />
-        
-        <Certifications
-          certifications={portfolioData.certifications}
-        />
+
+        {portfolioData?.certifications?.length  && <Certifications
+          certifications={portfolioData?.certifications}
+        />}
         
         <Contact
           personalInfo={portfolioData.personalInfo}

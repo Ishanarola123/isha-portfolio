@@ -36,7 +36,7 @@ export interface Project {
   stageUrl?: string;
   description: string;
   features: string[];
-  status?: 'Live' | 'Completed' | 'In Development' | string;
+  status?: "Live" | "Completed" | "In Development" | string;
   duration: string;
 }
 
@@ -52,6 +52,8 @@ export interface Education {
 export interface CertificationItem {
   title: string;
   url?: string;
+  // optional local or remote image path (recommend putting images in `public/certificates/` and using `/certificates/your-file.jpg`)
+  image?: string;
 }
 
 export interface CertificationCategory {

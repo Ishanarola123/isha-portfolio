@@ -256,13 +256,23 @@
       "category": "Competition Achievements",
       "items": [
         {
-          "title": "2nd Position - WYSWYG Web Designing, Techfest Converse 2021 (State Level)"
+          "title": "2nd Position - WYSWYG Web Designing, Techfest Converse 2021 (State Level)",
+          "image": "/certificates/WYSWYG- 2nd.png"
+        },
+        {
+          "title": "2nd Position - BUGBUZ, Techfest Converse 2022 (State Level)",
+          "image": "/certificates/bugbuz.png"
         },
         {
           "title": "1st Position - Story Writing Competition (Intra-college Level)"
         },
         {
-          "title": "1st Position - Interschool Essay Competition, Sharadayatan School"
+          "title": "1st Position - Interschool Essay Competition, Sharadayatan School",
+          "image": "/certificates/eassy.png"
+        },
+        {
+          "title": "Winner-Certificate of Excellence in Content Writing Competition",
+          "url": "https://unstop.com/certificate-preview/1e8afc60-22c4-44c3-9ce6-29d74524b522"
         },
         {
           "title": "Consolation Prize - Interschool Creative Educational Material Competition, Vanita Vishram"
@@ -286,7 +296,8 @@
           "title": "Newton's Coding Challenges"
         },
         {
-          "title": "National Level Talent Search Examination - JCI India"
+          "title": "National Level Talent Search Examination - JCI India",
+          "image": "/certificates/JCI.png"
         },
         {
           "title": "Participation in Quiz Round (on Unstop) of Mathlete",

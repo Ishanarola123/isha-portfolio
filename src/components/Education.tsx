@@ -1,6 +1,6 @@
-import React from 'react';
-import { GraduationCap } from 'lucide-react';
-import { Education as EducationType } from '../types';
+import React from "react";
+import { GraduationCap } from "lucide-react";
+import { Education as EducationType } from "../types";
 
 interface EducationProps {
   education: EducationType[];
@@ -21,15 +21,32 @@ const Education: React.FC<EducationProps> = ({ education }) => {
 
         <div className="space-y-6">
           {education.map((edu, index) => (
-            <div key={index} className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300">
+            <div
+              key={index}
+              className="bg-white dark:bg-gray-800 rounded-xl shadow-lg p-6 hover:shadow-xl transition-all duration-300"
+            >
               <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center flex-shrink-0">
                   <GraduationCap className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                    {edu.degree}
-                  </h3>
+                  {edu.certiImage ? (
+                    <a
+                      href={edu.certiImage}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2 font-semibold text-green-600 dark:text-green-400 hover:underline"
+                    >
+                      {/* <img src={edu.image} alt={`${edu.degree} certificate`} className="w-10 h-auto rounded-md shadow-sm object-cover" /> */}
+                      <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                        {edu.degree}
+                      </h3>
+                    </a>
+                  ) : (
+                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
+                      {edu.degree}
+                    </h3>
+                  )}
                   <p className="text-gray-700 dark:text-gray-300 mb-1 font-medium">
                     {edu.institution}
                   </p>
@@ -47,11 +64,22 @@ const Education: React.FC<EducationProps> = ({ education }) => {
                         🎯 CGPA: {edu.cgpa}
                       </span>
                     )}
-                    {edu.score && (
-                      <span className="font-semibold text-green-600 dark:text-green-400">
-                        🏆 Score: {edu.score}
-                      </span>
-                    )}
+                    {edu.score &&
+                      (edu.image ? (
+                        <a
+                          href={edu.image}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center gap-2 font-semibold text-green-600 dark:text-green-400 hover:underline"
+                        >
+                          {/* <img src={edu.image} alt={`${edu.degree} certificate`} className="w-10 h-auto rounded-md shadow-sm object-cover" /> */}
+                          <span>🏆 Score: {edu.score}</span>
+                        </a>
+                      ) : (
+                        <span className="font-semibold text-green-600 dark:text-green-400">
+                          🏆 Score: {edu.score}
+                        </span>
+                      ))}
                   </div>
                 </div>
               </div>

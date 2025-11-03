@@ -199,18 +199,24 @@
       "university": "Gujarat Technical University",
       "duration": "2019-2023",
       "cgpa": "9.63/10",
+      "image": "/certificates/gold-medal.png",
+      "certiImage": "/certificates/degree.png",
       "score": "Gold Medalist in Scet BE IT"
     },
     {
       "degree": "Higher Secondary Certificate (HSC)",
       "institution": "Gujarat Higher Secondary Education Board",
       "duration": "2019",
+      "image": "/certificates/std-12-GTU.png",
+      "certiImage": "/certificates/std-12-board.png",
       "score": "81.00% (Merit in three main subjects: 86%)"
     },
     {
       "degree": "Secondary School Certificate (SSC)",
       "institution": "Gujarat Secondary Education Board",
       "duration": "2017",
+      "image": "/certificates/std-10.png",
+      "certiImage": "/certificates/std-10.png",
       "score": "89.33%"
     }
   ],

@@ -47,6 +47,9 @@ export interface Education {
   duration: string;
   cgpa?: string;
   score?: string;
+  // optional certificate image for the degree (place files in public/certificates/ and reference with leading slash)
+  image?: string;
+  certiImage?: string;
 }
 
 export interface CertificationItem {

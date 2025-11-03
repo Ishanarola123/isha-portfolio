@@ -10,12 +10,47 @@
     "summary": "Experienced Senior Software Engineer with 2.5+ years of expertise in ReactJS and NextJS development. Proven track record of building scalable web applications with modern JavaScript frameworks, state management solutions, and RESTful API integrations. Strong background in full-stack development with excellent problem-solving skills and ability to work independently or as part of a team."
   },
   "skills": {
-    "frontend": ["ReactJS", "NextJS", "JavaScript", "TypeScript", "HTML5", "CSS3", "Bootstrap5", "Material-UI", "Tailwind CSS", "Radix UI"],
-    "stateManagement": ["Redux", "Context API", "Zustand", "React ToolKit Query"],
-    "tools": ["AWS Amplify", "AWS Cognito","Firebase" ,"Git", "BitBucket", "VS Code", "Sublime Text"],
-    "testing": ["JEST", "SWR"],
-    "other": [ "REST APIs", "C", "Core Java", "Problem Solving"],
-    "os": ["macOS", "Windows 10"]
+    "frontend": [
+      "ReactJS",
+      "NextJS",
+      "JavaScript",
+      "TypeScript",
+      "HTML5",
+      "CSS3",
+      "Bootstrap5",
+      "Material-UI",
+      "Tailwind CSS",
+      "Radix UI"
+    ],
+    "stateManagement": [
+      "Redux",
+      "Context API",
+      "Zustand",
+      "React ToolKit Query"
+    ],
+    "tools": [
+      "AWS Amplify",
+      "AWS Cognito",
+      "Firebase",
+      "Git",
+      "BitBucket",
+      "VS Code",
+      "Sublime Text"
+    ],
+    "testing": [
+      "JEST",
+      "SWR"
+    ],
+    "other": [
+      "REST APIs",
+      "C",
+      "Core Java",
+      "Problem Solving"
+    ],
+    "os": [
+      "macOS",
+      "Windows 10"
+    ]
   },
   "experience": {
     "company": "Narola Infotech Solutions LLP",
@@ -41,7 +76,13 @@
       "title": "ESAI Work",
       "company": "Narola Infotech Solutions LLP",
       "teamSize": 3,
-      "technologies": ["ReactJS", "Context API", "TypeScript", "NodeJS", "MongoDB"],
+      "technologies": [
+        "ReactJS",
+        "Context API",
+        "TypeScript",
+        "NodeJS",
+        "MongoDB"
+      ],
       "description": "Comprehensive administrative web application with advanced data visualization capabilities",
       "features": [
         "Dual UI interfaces for external and internal users with role-based access control",
@@ -61,9 +102,19 @@
       "title": "RECOUPLE",
       "company": "Narola Infotech Solutions LLP",
       "teamSize": 3,
-      "technologies": ["ReactJS", "Zustand", "SWR", "JEST", "AWS Amplify", "Cognito", "NodeJS", "MySQL", "Docker"],
-      "liveUrl": "app.recouple.au",
-      "stageUrl": "uat.2xe.au",
+      "technologies": [
+        "ReactJS",
+        "Zustand",
+        "SWR",
+        "JEST",
+        "AWS Amplify",
+        "Cognito",
+        "NodeJS",
+        "MySQL",
+        "Docker"
+      ],
+      "liveUrl": "https://app.recouple.au/",
+      "stageUrl": "https://uat.2xe.au/",
       "description": "Energy management and data visualization platform for organizational metrics",
       "features": [
         "Implemented AWS Cognito authentication with multi-factor authentication (MFA) including Google integration",
@@ -83,8 +134,17 @@
       "title": "Shipnavi",
       "company": "Narola Infotech Solutions LLP",
       "teamSize": 3,
-      "technologies": ["ReactJS", "TypeScript", "NextJS", "Redux", "React Query", "Tailwind CSS", "Radix UI", "NodeJS"],
-      "liveUrl": "shipnavi.com",
+      "technologies": [
+        "ReactJS",
+        "TypeScript",
+        "NextJS",
+        "Redux",
+        "React Query",
+        "Tailwind CSS",
+        "Radix UI",
+        "NodeJS"
+      ],
+      "liveUrl": "https://shipnavi.com/",
       "description": "Full-featured e-commerce platform with bidding functionality",
       "features": [
         "Developed comprehensive product management system with variants and categories",
@@ -101,8 +161,19 @@
       "title": "Techeeta",
       "company": "Narola Infotech Solutions LLP",
       "teamSize": 3,
-      "technologies": ["ReactJS", "TypeScript", "NextJS", "Redux", "React Query", "Material UI", "CSS", "Firebase", "Socket", "D3 Chart"],
-      "liveUrl": "techeeta.com",
+      "technologies": [
+        "ReactJS",
+        "TypeScript",
+        "NextJS",
+        "Redux",
+        "React Query",
+        "Material UI",
+        "CSS",
+        "Firebase",
+        "Socket",
+        "D3 Chart"
+      ],
+      "liveUrl": "https://techeeta.com/",
       "description": "Game analytics platform with real-time sensor data integration",
       "features": [
         "Real time Data handler based on socket - Insider Cloud",

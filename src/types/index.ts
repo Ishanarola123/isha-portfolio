@@ -49,9 +49,15 @@ export interface Education {
   score?: string;
 }
 
+export interface CertificationItem {
+  title: string;
+  url?: string;
+}
+
 export interface CertificationCategory {
   category: string;
-  items: string[];
+  // items can be plain strings (legacy) or objects with optional url
+  items: Array<string | CertificationItem>;
 }
 
 export interface Internship {

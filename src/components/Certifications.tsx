@@ -46,12 +46,30 @@ const Certifications: React.FC<CertificationsProps> = ({ certifications }) => {
               </div>
               
               <ul className="space-y-3">
-                {cert.items.map((item, itemIndex) => (
-                  <li key={itemIndex} className="flex items-start gap-2 text-gray-700 dark:text-gray-300 text-sm">
-                    <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
-                    <span className="leading-relaxed">{item}</span>
-                  </li>
-                ))}
+                {cert.items.map((rawItem, itemIndex) => {
+                  // support legacy string items and new objects with title and optional url
+                  const isString = typeof rawItem === 'string';
+                  const title = isString ? rawItem : (rawItem as any).title;
+                  const url = isString ? undefined : (rawItem as any).url;
+
+                  return (
+                    <li key={itemIndex} className="flex items-start gap-2 text-gray-700 dark:text-gray-300 text-sm">
+                      <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
+                      {url ? (
+                        <a
+                          href={url}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="leading-relaxed text-blue-600 dark:text-blue-400 hover:underline"
+                        >
+                          {title}
+                        </a>
+                      ) : (
+                        <span className="leading-relaxed">{title}</span>
+                      )}
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           ))}

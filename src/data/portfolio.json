@@ -218,30 +218,92 @@
     {
       "category": "Technical Certifications",
       "items": [
-        "C Language Certification - Santa Cruz, California",
-        "Android App Development Course - Great Learning",
-        "Android Nought Mobile Apps Training - EDUCBA",
-        "React Js HackerRank",
-        "Javascript HackerRank"
+        {
+          "title": "C Language Certification - Santa Cruz, California",
+          "url": "https://www.coursera.org/account/accomplishments/certificate/7T4RKB3YYSCV"
+        },
+        {
+          "title": "Android Great Learning",
+          "url": "https://olympus.mygreatlearning.com/courses/21871/certificate?pb_id=581"
+        },
+        {
+          "title": "Android Nought Mobile Apps Training - EDUCBA",
+          "url": "https://www.educba.com/certificate/?c=5GQKDDPOA"
+        },
+        {
+          "title": "React Js HackerRank",
+          "url": "https://www.hackerrank.com/certificates/ed54dd02ddbb"
+        },
+        {
+          "title": "Javascript HackerRank",
+          "url": "https://www.hackerrank.com/certificates/84d0ab7f7f2a"
+        },
+        {
+          "title": "SQL Assetment",
+          "url": "https://www.hackerrank.com/certificates/b2e9928c1bd3"
+        },
+        {
+          "title": "Resonsive website using HTML,CSS,JS,Bootstrap",
+          "url": "https://www.educba.com/certificate/?c=JUZ3JBLDZ"
+        },
+        {
+          "title": "MongoDB Great Learning",
+          "url": "https://olympus.mygreatlearning.com/courses/46345/certificate?pb_id=581"
+        }
       ]
     },
     {
       "category": "Competition Achievements",
       "items": [
-        "2nd Position - WYSWYG Web Designing, Techfest Converse 2021 (State Level)",
-        "1st Position - Story Writing Competition (Intra-college Level)",
-        "1st Position - Interschool Essay Competition, Sharadayatan School",
-        "Consolation Prize - Interschool Creative Educational Material Competition, Vanita Vishram"
+        {
+          "title": "2nd Position - WYSWYG Web Designing, Techfest Converse 2021 (State Level)"
+        },
+        {
+          "title": "1st Position - Story Writing Competition (Intra-college Level)"
+        },
+        {
+          "title": "1st Position - Interschool Essay Competition, Sharadayatan School"
+        },
+        {
+          "title": "Consolation Prize - Interschool Creative Educational Material Competition, Vanita Vishram"
+        }
       ]
     },
     {
       "category": "Hackathons & Contests",
       "items": [
-        "TechPrexa 2022 Hackathon - Dronacharya College of Engineering & GeeksForGeeks",
-        "App Coding Contest - IIT Hyderabad",
-        "TCS CodeVita Programming Contest",
-        "Newton's Coding Challenges",
-        "National Level Talent Search Examination - JCI India"
+        {
+          "title": "TechPrexa 2022 Hackathon - Dronacharya College of Engineering & GeeksForGeeks",
+          "url": "https://certificate.givemycertificate.com/c/42e46eeb-f065-4987-9272-4fbaee9df570"
+        },
+        {
+          "title": "App Coding Contest - IIT Hyderabad"
+        },
+        {
+          "title": "TCS CodeVita Programming Contest"
+        },
+        {
+          "title": "Newton's Coding Challenges"
+        },
+        {
+          "title": "National Level Talent Search Examination - JCI India"
+        },
+        {
+          "title": "Participation in Quiz Round (on Unstop) of Mathlete",
+          "url": "https://unstop.com/certificate-preview/86484f53-f955-4186-86e3-acc4d7dd4bcf"
+        },
+        {
+          "title": "Decrypto 2.0 - ELICIT'22",
+          "url": "https://olympus.mygreatlearning.com/courses/46345/certificate?pb_id=581"
+        },
+        {
+          "title": "TechGig Geek Goddess 2022 Semi Finalist",
+          "url": "https://www.techgig.com/geekgoddess/coding/print_certificate?param=d0F1cWZidEtaODZGUllEbjJrY2xMMjJJZ2NZZnVoTTQzTHVORWloTndsMGcxTlpMT1VQeG80QU1yTW9OL3E1Ky8yZlZGSjlhWlU1d2xjWXVNekZFVXc9PQ=="
+        },
+        {
+          "title": "TechGig Geek Goddess 2022 Finalist",
+          "url": "https://www.techgig.com/geekgoddess/coding/print_certificate?param=d0F1cWZidEtaODZGUllEbjJrY2xMMjJJZ2NZZnVoTTQzTHVORWloTndsMFh0K0gvSlQ1TCtpVUh0Uk9zNjZGY1cvYkdNK2xjeXNJaU1McTE1RUpOWGc9PQ=="
+        }
       ]
     }
   ],

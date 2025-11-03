@@ -1,5 +1,8 @@
-import React from "react";
+"use client";
+
+import React, { useState } from "react";
 import { Mail, Phone, MapPin, Linkedin, Github, Send } from "lucide-react";
+import toast from "react-hot-toast";
 import { PersonalInfo } from "../types";
 
 interface ContactProps {
@@ -7,7 +10,8 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
-  // ✨ Handle form submit
+  const [loading, setLoading] = useState(false);
+
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     const form = e.currentTarget;
@@ -20,6 +24,8 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
       message: formData.get("message"),
     };
 
+    setLoading(true);
+
     try {
       const res = await fetch("/api/contact", {
         method: "POST",
@@ -30,14 +36,16 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
       const result = await res.json();
 
       if (result.success) {
-        alert("✅ Message sent successfully!");
+        toast.success("Message sent successfully!");
         form.reset();
       } else {
-        alert("❌ Failed to send message. Try again later.");
+        toast.error("Failed to send message. Please try again.");
       }
     } catch (error) {
       console.error(error);
-      alert("⚠️ Something went wrong.");
+      toast.error("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -134,7 +142,6 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
               Send Message
             </h3>
 
-            {/* ✅ Add onSubmit here */}
             <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
@@ -190,10 +197,21 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
 
               <button
                 type="submit"
-                className="w-full bg-blue-600 text-white px-6 py-3 rounded-lg hover:bg-blue-700 transition-colors flex items-center justify-center gap-2 font-medium"
+                disabled={loading}
+                className={`w-full bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 font-medium transition-colors ${
+                  loading
+                    ? "opacity-70 cursor-not-allowed"
+                    : "hover:bg-blue-700"
+                }`}
               >
-                <Send className="w-5 h-5" />
-                Send Message
+                {loading ? (
+                  <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />
+                ) : (
+                  <>
+                    <Send className="w-5 h-5" />
+                    Send Message
+                  </>
+                )}
               </button>
             </form>
           </div>

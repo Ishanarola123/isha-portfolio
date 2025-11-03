@@ -7,6 +7,40 @@ interface ContactProps {
 }
 
 const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
+  // ✨ Handle form submit
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const form = e.currentTarget;
+    const formData = new FormData(form);
+
+    const data = {
+      name: formData.get("name"),
+      email: formData.get("email"),
+      subject: formData.get("subject"),
+      message: formData.get("message"),
+    };
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (result.success) {
+        alert("✅ Message sent successfully!");
+        form.reset();
+      } else {
+        alert("❌ Failed to send message. Try again later.");
+      }
+    } catch (error) {
+      console.error(error);
+      alert("⚠️ Something went wrong.");
+    }
+  };
+
   return (
     <section id="contact" className="py-16 px-4 sm:px-6 lg:px-8">
       <div className="container mx-auto">
@@ -100,13 +134,16 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
               Send Message
             </h3>
 
-            <form className="space-y-6">
+            {/* ✅ Add onSubmit here */}
+            <form className="space-y-6" onSubmit={handleSubmit}>
               <div>
                 <label className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
                   Your Name
                 </label>
                 <input
                   type="text"
+                  name="name"
+                  required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-300"
                   placeholder="Enter your name"
                 />
@@ -118,6 +155,8 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                 </label>
                 <input
                   type="email"
+                  name="email"
+                  required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-300"
                   placeholder="Enter your email"
                 />
@@ -129,6 +168,8 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                 </label>
                 <input
                   type="text"
+                  name="subject"
+                  required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-300"
                   placeholder="Enter subject"
                 />
@@ -140,6 +181,8 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                 </label>
                 <textarea
                   rows={5}
+                  name="message"
+                  required
                   className="w-full px-4 py-3 border border-gray-300 dark:border-gray-600 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent dark:bg-gray-700 dark:text-white transition-all duration-300 resize-vertical"
                   placeholder="Enter your message"
                 ></textarea>

@@ -72,12 +72,12 @@ const Header: React.FC<HeaderProps> = ({
           </div>
 
           <div className="md:hidden flex items-center space-x-4 mobile-menu-button-wrapper">
-            <div className="mobile-download-wrapper">
+            {/* <div className="mobile-download-wrapper">
               <ResumeDownloadButton
                 portfolioData={portfolioData}
                 isMobile={true}
               />
-            </div>
+            </div> */}
             <button
               onClick={onMenuToggle}
               className="p-2 rounded-lg text-gray-700 dark:text-gray-300 mobile-menu-button"

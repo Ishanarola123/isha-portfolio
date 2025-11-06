@@ -20,13 +20,26 @@
       "Bootstrap5",
       "Material-UI",
       "Tailwind CSS",
-      "Radix UI"
+      "Radix UI",
+      "React Hook Form",
+      "DND",
+      "Framer Motion",
+      "D3.js",
+      "Recharts"
     ],
     "stateManagement": [
       "Redux",
       "Context API",
       "Zustand",
       "React ToolKit Query"
+    ],
+    "architecture": [
+      "React Server Components",
+      "App Router (Next.js 13+)",
+      "Component Design Patterns",
+      "Code Splitting & Lazy Loading",
+      "Error Boundaries",
+      "Custom Hooks"
     ],
     "tools": [
       "AWS Amplify",
@@ -35,21 +48,64 @@
       "Git",
       "BitBucket",
       "VS Code",
-      "Sublime Text"
+      "Vite",
+      "ESLint",
+      "Prettier"
+    ],
+    "backendIntegration": [
+      "REST APIs",
+      "GraphQL",
+      "WebSockets",
+      "Socket.io",
+      "Next.js API Routes",
+      "JWT Authentication",
+      "OAuth2"
+    ],
+    "cloudAndDeployment": [
+      "Vercel",
+      "Netlify",
+      "AWS (S3, CloudFront, Lambda)",
+      "GitHub Actions",
+      "CI/CD Pipelines"
+    ],
+    "performanceAndOptimization": [
+      "React Profiler",
+      "Lighthouse",
+      "Web Vitals",
+      "Bundle Analysis",
+      "Tree Shaking",
+      "Virtualization (React Window / Virtual)"
+    ],
+    "projectManagement": [
+      "Trello",
+      "ClickUp",
+      "Notion",
+      "Slack",
+      "Asana"
     ],
     "testing": [
       "JEST",
       "SWR"
     ],
     "other": [
-      "REST APIs",
-      "C",
-      "Core Java",
-      "Problem Solving"
+      "Accessibility (a11y)",
+      "Responsive Design",
+      "Internationalization (i18n)",
+      "Problem Solving",
+      "Design Systems",
+      "Cross-Browser Compatibility"
     ],
     "os": [
       "macOS",
       "Windows 10"
+    ],
+    "aiTools": [
+      "GitHub Copilot",
+      "ChatGPT",
+      "Cursor AI",
+      "Cloude",
+      "Lmarena",
+      "Gemini"
     ]
   },
   "experience": {

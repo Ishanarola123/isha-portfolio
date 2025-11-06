@@ -9,44 +9,46 @@ interface SkillsProps {
 interface SkillBadgeProps {
   skill: string;
   category: string;
+  colorClass: string;
 }
 
-const SkillBadge: React.FC<SkillBadgeProps> = ({ skill, category }) => {
-  const getSkillIcon = (skill: string, category: string) => {
-    if (
-      category === "frontend" &&
-      (skill.includes("React") || skill.includes("Next"))
-    )
-      return <Code className="w-4 h-4" />;
-    if (category === "tools" && skill.includes("AWS"))
-      return <Shield className="w-4 h-4" />;
-    if (category === "other" && skill.includes("Android"))
-      return <Smartphone className="w-4 h-4" />;
-    return null;
-  };
+const categoryColors = [
+  "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
+  "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+  "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
+  "bg-pink-100 text-pink-800 dark:bg-pink-900 dark:text-pink-200",
+  "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
+  "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200",
+  "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
+  "bg-rose-100 text-rose-800 dark:bg-rose-900 dark:text-rose-200",
+  "bg-cyan-100 text-cyan-800 dark:bg-cyan-900 dark:text-cyan-200",
+];
 
-  const getBadgeColor = (category: string) => {
-    switch (category) {
-      case "frontend":
-        return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200";
-      case "stateManagement":
-        return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200";
-      case "tools":
-        return "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200";
-      case "testing":
-        return "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200";
-      default:
-        return "bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200";
-    }
-  };
+const getSkillIcon = (skill: string, category: string) => {
+  if (
+    category === "frontend" &&
+    (skill.includes("React") || skill.includes("Next"))
+  )
+    return <Code className="w-4 h-4" />;
+  if (category === "tools" && skill.includes("AWS"))
+    return <Shield className="w-4 h-4" />;
+  if (category === "other" && skill.includes("Android"))
+    return <Smartphone className="w-4 h-4" />;
+  return null;
+};
 
+const SkillBadge: React.FC<SkillBadgeProps> = ({
+  skill,
+  category,
+  colorClass,
+}) => {
   return (
     <span
       className={`
-      inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
-      transition-all duration-300 hover:scale-105 cursor-default
-      ${getBadgeColor(category)}
-    `}
+        inline-flex items-center gap-2 px-4 py-2 rounded-full text-sm font-medium
+        transition-all duration-300 hover:scale-105 cursor-default
+        ${colorClass}
+      `}
     >
       {getSkillIcon(skill, category)}
       {skill}
@@ -56,8 +58,22 @@ const SkillBadge: React.FC<SkillBadgeProps> = ({ skill, category }) => {
 
 const Skills: React.FC<SkillsProps> = ({ skills }) => {
   const formatCategoryName = (category: string) => {
-    return category.replace(/([A-Z])/g, " $1").trim();
+    // Map of special category names
+    const specialNames: Record<string, string> = {
+      aiTools: "AI Tools",
+      stateManagement: "State Management",
+      os: "Operating Systems",
+    };
+
+    if (specialNames[category]) return specialNames[category];
+
+    // Default: split camelCase and capitalize words
+    return category
+      .replace(/([A-Z])/g, " $1")
+      .replace(/\b\w/g, (c) => c.toUpperCase());
   };
+
+  const categories = Object.entries(skills);
 
   return (
     <section
@@ -75,21 +91,30 @@ const Skills: React.FC<SkillsProps> = ({ skills }) => {
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {Object.entries(skills).map(([category, skillList]) => (
-            <div
-              key={category}
-              className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6"
-            >
-              <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize">
-                {formatCategoryName(category)}
-              </h3>
-              <div className="flex flex-wrap gap-2">
-                {skillList.map((skill: string, index: number) => (
-                  <SkillBadge key={index} skill={skill} category={category} />
-                ))}
+          {categories.map(([category, skillList], index) => {
+            const colorClass = categoryColors[index % categoryColors.length]; // 🔹 cycle through colors
+
+            return (
+              <div
+                key={category}
+                className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6"
+              >
+                <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-4 capitalize">
+                  {formatCategoryName(category)}
+                </h3>
+                <div className="flex flex-wrap gap-2">
+                  {skillList.map((skill: string, skillIndex: number) => (
+                    <SkillBadge
+                      key={skillIndex}
+                      skill={skill}
+                      category={category}
+                      colorClass={colorClass}
+                    />
+                  ))}
+                </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

@@ -346,7 +346,7 @@
       "items": [
         {
           "title": "TechPrexa 2022 Hackathon - Dronacharya College of Engineering & GeeksForGeeks",
-          "url": "https://certificate.givemycertificate.com/c/42e46eeb-f065-4987-9272-4fbaee9df570"
+          "image": "/certificates/tech-prexa.png"
         },
         {
           "title": "App Coding Contest - IIT Hyderabad"
@@ -371,11 +371,11 @@
         },
         {
           "title": "TechGig Geek Goddess 2022 Semi Finalist",
-          "url": "https://www.techgig.com/geekgoddess/coding/print_certificate?param=d0F1cWZidEtaODZGUllEbjJrY2xMMjJJZ2NZZnVoTTQzTHVORWloTndsMGcxTlpMT1VQeG80QU1yTW9OL3E1Ky8yZlZGSjlhWlU1d2xjWXVNekZFVXc9PQ=="
+          "image": "/certificates/techgig-semifinal.png"
         },
         {
           "title": "TechGig Geek Goddess 2022 Finalist",
-          "url": "https://www.techgig.com/geekgoddess/coding/print_certificate?param=d0F1cWZidEtaODZGUllEbjJrY2xMMjJJZ2NZZnVoTTQzTHVORWloTndsMFh0K0gvSlQ1TCtpVUh0Uk9zNjZGY1cvYkdNK2xjeXNJaU1McTE1RUpOWGc9PQ=="
+          "image": "/certificates/techgig-final.png"
         }
       ]
     }

@@ -1,8 +1,10 @@
-import React from 'react';
-import { Heart, Code } from 'lucide-react';
+import React from "react";
+import { Heart, Code } from "lucide-react";
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+
+  const coreTechnologies = ["ReactJS", "NextJS", "TypeScript", "JavaScript"];
 
   return (
     <footer className="bg-gray-900 text-white py-12">
@@ -12,8 +14,9 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Isha Narola</h3>
             <p className="text-gray-400 leading-relaxed">
-              Senior Software Engineer passionate about creating scalable web applications 
-              with modern technologies and delivering exceptional user experiences.
+              Senior Software Engineer passionate about creating scalable web
+              applications with modern technologies and delivering exceptional
+              user experiences.
             </p>
           </div>
 
@@ -32,22 +35,34 @@ const Footer: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#experience" className="hover:text-white transition-colors">
+                <a
+                  href="#experience"
+                  className="hover:text-white transition-colors"
+                >
                   Experience
                 </a>
               </li>
               <li>
-                <a href="#projects" className="hover:text-white transition-colors">
+                <a
+                  href="#projects"
+                  className="hover:text-white transition-colors"
+                >
                   Projects
                 </a>
               </li>
               <li>
-                <a href="#education" className="hover:text-white transition-colors">
+                <a
+                  href="#education"
+                  className="hover:text-white transition-colors"
+                >
                   Education
                 </a>
               </li>
               <li>
-                <a href="#certifications" className="hover:text-white transition-colors">
+                <a
+                  href="#certifications"
+                  className="hover:text-white transition-colors"
+                >
                   Certifications
                 </a>
               </li>
@@ -58,7 +73,7 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Core Technologies</h3>
             <div className="flex flex-wrap gap-2">
-              {['ReactJS', 'NextJS', 'TypeScript', 'Node.js', 'AWS', 'MongoDB'].map((tech) => (
+              {coreTechnologies.map((tech) => (
                 <span
                   key={tech}
                   className="px-3 py-1 bg-gray-800 text-gray-300 rounded-full text-sm"
@@ -79,9 +94,9 @@ const Footer: React.FC = () => {
               <Code className="w-4 h-4 text-blue-500" />
               <span>by Isha Narola</span>
             </div>
-            
+
             <p className="text-gray-400 text-sm">
-              © {currentYear} Isha Narola. All rights reserved. 
+              © {currentYear} Isha Narola. All rights reserved.
             </p>
           </div>
         </div>

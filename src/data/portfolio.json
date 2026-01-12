@@ -137,18 +137,23 @@
         "Context API",
         "TypeScript",
         "NodeJS",
-        "MongoDB"
+        "MongoDB",
+        "Recharts",
+        "Material UI",
+        "AWS Amplify"
       ],
-      "description": "Comprehensive administrative web application with advanced data visualization capabilities",
+      "description": "Comprehensive administrative web application designed to streamline organizational workflows and provide advanced data visualization for internal and external users.",
       "features": [
-        "Dual UI interfaces for external and internal users with role-based access control",
-        "Dynamic reporting system with multi-feature tables supporting search, filtering, sorting, and data export",
-        "Built responsive UI components from Figma designs with multilingual support (English & Japanese)",
-        "User Role Management System",
-        "Advanced Search and Filtering Mechanisms",
-        "Excel Data Export Functionality",
-        "Candidate Profile Management",
-        "Multi-language Localization"
+        "Dual UI interfaces for internal and external users",
+        "Role-based user access management",
+        "Dynamic reporting system for different user roles",
+        "Multi-feature data tables with search, filtering, sorting, pinning, and column visibility control",
+        "Advanced filters based on position, specialization, and stage",
+        "Clear filters and quick navigation between report pages",
+        "Chart-based data visualization for reports",
+        "Excel data export with language-specific formatting",
+        "Candidate profile management",
+        "Multi-language localization (English & Japanese)"
       ],
       "status": "Completed",
       "duration": "2023-2024"
@@ -171,16 +176,23 @@
       ],
       "liveUrl": "https://app.recouple.au/",
       "stageUrl": "https://uat.2xe.au/",
-      "description": "Energy management and data visualization platform for organizational metrics",
+      "description": "Energy management and analytics platform providing lifecycle management of contracts, projects, emissions, and financial forecasting for organizations.",
       "features": [
-        "Implemented AWS Cognito authentication with multi-factor authentication (MFA) including Google integration",
-        "Developed complex contract management system with date validation and overlap prevention",
-        "Built dynamic resource management with emission factors and economic life calculations",
-        "Profile Dashboard with Data Records Management",
-        "Scenario Planning with Target and Opportunity Management",
-        "Project Management with Revenue Tracking",
-        "Comprehensive Settings Panel with User/Permission Management",
-        "Site Management with GPS-based Asset Tracking"
+        "AWS Cognito authentication with Google login and MFA",
+        "Role-based access control (Admin, Manager, Monitoring)",
+        "Business selection and permission-driven UI after login",
+        "Contract creation with date overlap validation",
+        "Resource management with units, sub-units, and preferred units",
+        "Emission sources with timeline-based emission factor handling",
+        "Conversion of contracts into opportunities and projects",
+        "Scenario planning with targets and opportunity management",
+        "Economic-life–based expense, cashflow, and forecasting calculations",
+        "Reduction and target calculators",
+        "Interactive dashboards for energy, emissions, revenue, and reductions",
+        "CSV upload and drag-and-drop data records",
+        "Advanced filtering and forecasting visualizations",
+        "Business, site, and asset management with GPS-based mapping",
+        "Comprehensive settings and configuration management"
       ],
       "status": "Live",
       "duration": "2023"
@@ -201,13 +213,20 @@
         "NodeJS"
       ],
       "liveUrl": "https://shipnavi.com/",
-      "description": "Full-featured e-commerce platform with bidding functionality",
+      "description": "E-commerce platform offering product purchasing and bidding functionality with a secure and user-friendly shopping experience.",
       "features": [
-        "Developed comprehensive product management system with variants and categories",
-        "Built secure checkout process with multiple payment and shipping options",
-        "Created user authentication system with wishlist and purchase history tracking",
-        "Optimized for performance, browser compatibility, and responsive design",
-        "Implemented bidding functionality for products"
+        "User authentication and authorization",
+        "Category-based product listing with variants",
+        "Advanced product search and filtering",
+        "Wishlist and purchase history management",
+        "Product bidding functionality",
+        "Breadcrumb navigation",
+        "Shopping cart with optimized checkout flow",
+        "Multiple shipping options with shipping cost calculation",
+        "Secure payment processing",
+        "Responsive and user-friendly UI",
+        "High-performance optimized loading",
+        "Cross-browser compatibility"
       ],
       "status": "Live",
       "duration": "2022-2023"
@@ -224,28 +243,59 @@
         "Redux",
         "React Query",
         "Material UI",
-        "CSS",
         "Firebase",
         "Socket",
-        "D3 Chart"
+        "D3.js",
+        "Electron JS"
       ],
       "liveUrl": "https://techeeta.com/",
-      "description": "Game analytics platform with real-time sensor data integration",
+      "description": "Real-time game analytics platform integrating sensor-based data to track player performance, health metrics, and movement analytics.",
       "features": [
-        "Real time Data handler based on socket - Insider Cloud",
-        "Intense & inspirit based sensor connection",
-        "Assign sensor to player and Get real time data based on device",
-        "Create various tracker such as Replay, Football tracker, performance, Distance tracker",
-        "Trends analysis as well as heart rate monitoring",
-        "Login with firebase with verify email address",
-        "Performance analysis such as chart overview",
-        "Multi-language Localization",
-        "Sessions management for all teams",
-        "Heart Rate tracker, Distance tracker implement based on live data",
-        "Football tracker based on each player's position with the time range"
+        "Firebase authentication with email verification",
+        "Real-time data streaming using socket connections (Insider Cloud)",
+        "Sensor connection and live player data tracking",
+        "Football tracker with positional and time-based analytics",
+        "Heart rate and distance monitoring",
+        "Replay and performance trend analysis",
+        "Interactive D3.js-based performance charts",
+        "Advanced search and filtering mechanisms",
+        "Session management for multiple teams",
+        "Multi-language localization",
+        "Excel data export functionality",
+        "Hub device integration with Electron desktop application"
       ],
       "status": "In Development",
       "duration": "2024-Present"
+    },
+    {
+      "id": 5,
+      "title": "ESAI Jobs",
+      "company": "Narola Infotech Solutions LLP",
+      "teamSize": 2,
+      "technologies": [
+        "ReactJS",
+        "Context API",
+        "TypeScript",
+        "NodeJS",
+        "MongoDB",
+        "Material UI",
+        "Recharts",
+        "AWS Amplify"
+      ],
+      "liveUrl": "https://esai.jobs/",
+      "description": "Job search platform designed to help users discover, save, and manage job opportunities with advanced filtering and communication features.",
+      "features": [
+        "Advanced job listing and search functionality",
+        "Detailed job overview pages",
+        "Save jobs to favorites",
+        "Shortened job sharing URLs using Short.io",
+        "Zoho meeting scheduling with recruiters",
+        "Multi-language job portal",
+        "Responsive and user-friendly interface",
+        "Chart-based data representation for reports"
+      ],
+      "status": "Live",
+      "duration": "2023"
     }
   ],
   "education": [

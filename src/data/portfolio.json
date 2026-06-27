@@ -50,7 +50,12 @@
       "VS Code",
       "Vite",
       "ESLint",
-      "Prettier"
+      "Prettier",
+      "Docker",
+      "Redis",
+      "Swagger",
+      "Postman",
+      "API Dogs"
     ],
     "backendIntegration": [
       "REST APIs",
@@ -120,10 +125,11 @@
       "Collaborated with cross-functional teams in agile environments"
     ],
     "achievements": [
-      "Successfully delivered 4+ major projects",
+      "Successfully delivered 5+ major projects",
       "Implemented AWS cloud solutions with 99.9% uptime",
       "Built applications serving 10,000+ users",
-      "Mentored junior developers and led code reviews"
+      "Mentored junior developers and led code reviews",
+      "Delivered the Long scale and complicated module "
     ]
   },
   "projects": [
@@ -155,14 +161,14 @@
         "Candidate profile management",
         "Multi-language localization (English & Japanese)"
       ],
-      "status": "Completed",
+      "status": "Live",
       "duration": "2023-2024"
     },
     {
       "id": 2,
       "title": "RECOUPLE",
       "company": "Narola Infotech Solutions LLP",
-      "teamSize": 3,
+      "teamSize": 5,
       "technologies": [
         "ReactJS",
         "Zustand",
@@ -175,7 +181,7 @@
         "Docker"
       ],
       "liveUrl": "https://app.recouple.au/",
-      "stageUrl": "https://uat.2xe.au/",
+      "stageUrl": "https://uat.recouple.au/",
       "description": "Energy management and analytics platform providing lifecycle management of contracts, projects, emissions, and financial forecasting for organizations.",
       "features": [
         "AWS Cognito authentication with Google login and MFA",
@@ -248,7 +254,10 @@
         "D3.js",
         "Electron JS"
       ],
-      "liveUrl": "https://techeeta.com/",
+      "liveUrl": "https://techeeta-analytics-platform.web.app/auth/sign-in",
+      "stageUrl": "https://techeeta-analytics-stage.web.app",
+      "testUrl": "https://techeeta-analytics-test.web.app",
+      "marketingUrl": "https://techeeta.com/",
       "description": "Real-time game analytics platform integrating sensor-based data to track player performance, health metrics, and movement analytics.",
       "features": [
         "Firebase authentication with email verification",
@@ -264,7 +273,7 @@
         "Excel data export functionality",
         "Hub device integration with Electron desktop application"
       ],
-      "status": "In Development",
+      "status": "Live",
       "duration": "2024-Present"
     },
     {
@@ -296,6 +305,45 @@
       ],
       "status": "Live",
       "duration": "2023"
+    },
+    {
+      "id": 6,
+      "title": "Diamond Factory Management System",
+      "company": "Radhe Diamond",
+      "teamSize": 1,
+      "technologies": [
+        "ReactJS",
+        "TypeScript",
+        "NodeJS",
+        "ExpressJS",
+        "MongoDB",
+        "Material UI",
+        "JWT Authentication",
+        "React Hook Form",
+        "PDF Export",
+        "CSV Export"
+      ],
+      "liveUrl": "https://diamond-web-nu.vercel.app/report",
+      "description": "A comprehensive workforce and payroll management system developed for a diamond manufacturing business to digitize daily production tracking, employee management, salary calculation, withdrawals, and monthly payroll reporting. The application automates manual payroll processes, improves operational efficiency, and provides detailed reporting with export capabilities.",
+      "features": [
+        "Secure admin authentication and protected dashboard",
+        "Employee management with add, edit, delete, and department assignment",
+        "Department management with complete CRUD operations",
+        "Daily work log management with production quantity tracking",
+        "Automatic salary calculation based on quantity and department-specific rates",
+        "Employee salary withdrawal management with payment history",
+        "Monthly payroll report generation with remaining balance calculation",
+        "Employee-wise and department-wise salary reports",
+        "Advanced search and filtering across employees, departments, and work logs",
+        "Real-time salary status tracking (Paid / Unpaid)",
+        "Detailed payroll insights with work salary, withdrawals, and remaining amount",
+        "CSV export for accounting and data analysis",
+        "PDF report generation for monthly payroll records",
+        "Responsive admin dashboard with modern dark-themed UI",
+        "Optimized data tables with fast navigation and management"
+      ],
+      "status": "Live",
+      "duration": "2026"
     }
   ],
   "education": [

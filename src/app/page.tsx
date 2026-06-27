@@ -16,6 +16,7 @@ export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
+  const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -38,7 +39,7 @@ export default function Home() {
     const observer = new IntersectionObserver(observerCallback, observerOptions);
     
     // Observe all sections
-    const sections = ['home', 'about', 'experience', 'projects', 'education', 'certifications', 'contact'];
+    const sections = ['home', 'skills', 'experience', 'projects', 'education', 'certifications', 'contact'];
     sections.forEach((sectionId) => {
       const element = document.getElementById(sectionId);
       if (element) {
@@ -81,6 +82,15 @@ export default function Home() {
         
         <Skills
           skills={portfolioData.skills}
+          selectedSkill={selectedSkill}
+          onSelectSkill={(skill) => {
+            if (selectedSkill === skill) {
+              setSelectedSkill(null);
+            } else {
+              setSelectedSkill(skill);
+              scrollToSection('projects');
+            }
+          }}
         />
         
         <Experience
@@ -89,6 +99,8 @@ export default function Home() {
         
         <Projects
           projects={portfolioData.projects}
+          selectedSkill={selectedSkill}
+          onClearFilter={() => setSelectedSkill(null)}
         />
         
         <Education

@@ -176,7 +176,7 @@ const Skills: React.FC<SkillsProps> = ({ skills, selectedSkill, onSelectSkill })
       id="skills"
       className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 transition-colors duration-500"
     >
-      <div className="container mx-auto max-w-6xl">
+      <div className="container mx-auto">
         {/* Skills Universe Box */}
         <div className="bg-[#0b0914] text-white rounded-3xl p-8 md:p-12 shadow-2xl border border-indigo-950/40 relative overflow-hidden mb-12">
           {/* Cosmic background effects */}

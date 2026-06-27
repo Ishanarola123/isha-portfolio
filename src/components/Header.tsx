@@ -28,7 +28,7 @@ const Header: React.FC<HeaderProps> = ({
 }) => {
   const navigation: NavigationItem[] = [
     { id: "home", label: "Home", icon: User },
-    { id: "about", label: "About", icon: Code },
+    { id: "skills", label: "Skills", icon: Code },
     { id: "experience", label: "Experience", icon: Briefcase },
     { id: "projects", label: "Projects", icon: Database },
     { id: "education", label: "Education", icon: GraduationCap },

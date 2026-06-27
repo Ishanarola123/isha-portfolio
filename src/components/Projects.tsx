@@ -1,9 +1,11 @@
 import React, { useState } from "react";
-import { ExternalLink, Users, Calendar } from "lucide-react";
+import { ExternalLink, Users, Calendar, X } from "lucide-react";
 import { Project } from "../types";
 
 interface ProjectsProps {
   projects: Project[];
+  selectedSkill?: string | null;
+  onClearFilter?: () => void;
 }
 
 interface ProjectCardProps {
@@ -129,7 +131,48 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
   );
 };
 
-const Projects: React.FC<ProjectsProps> = ({ projects }) => {
+const Projects: React.FC<ProjectsProps> = ({ projects, selectedSkill, onClearFilter }) => {
+  const filteredProjects = selectedSkill
+    ? projects.filter((project) => {
+        const skillLower = selectedSkill.toLowerCase();
+        
+        // Node & Express match NodeJS or ExpressJS or Express
+        if (skillLower.includes("node") && skillLower.includes("express")) {
+          return project.technologies.some(
+            (tech) => {
+              const techLower = tech.toLowerCase();
+              return techLower.includes("node") || techLower.includes("express");
+            }
+          );
+        }
+        
+        // Cursor matches Cursor AI, Cursor, etc.
+        if (skillLower.includes("cursor")) {
+          return project.technologies.some(
+            (tech) => tech.toLowerCase().includes("cursor")
+          );
+        }
+
+        // Material UI matches Material-UI, MUI, Material UI, MaterialUI
+        if (skillLower.includes("material") || skillLower.includes("mui")) {
+          return project.technologies.some(
+            (tech) => {
+              const techLower = tech.toLowerCase();
+              return techLower.includes("material") || techLower.includes("mui");
+            }
+          );
+        }
+
+        // Default match (sub-string match)
+        return project.technologies.some((tech) => {
+          const techLower = tech.toLowerCase();
+          const normalizedTech = techLower.replace(/js$/, "");
+          const normalizedSkill = skillLower.replace(/js$/, "");
+          return normalizedTech.includes(normalizedSkill) || normalizedSkill.includes(normalizedTech);
+        });
+      })
+    : projects;
+
   return (
     <section
       id="projects"
@@ -145,11 +188,40 @@ const Projects: React.FC<ProjectsProps> = ({ projects }) => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8">
-          {projects.map((project) => (
-            <ProjectCard key={project.id} project={project} />
-          ))}
-        </div>
+        {selectedSkill && (
+          <div className="flex justify-center mb-8">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/85 rounded-full shadow-sm">
+              <span className="text-sm text-gray-700 dark:text-gray-300">
+                Filtered by <strong className="text-blue-600 dark:text-blue-400">{selectedSkill}</strong>
+              </span>
+              <button
+                onClick={onClearFilter}
+                className="p-1 hover:bg-blue-100 dark:hover:bg-blue-900 rounded-full text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                title="Clear filter"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            </div>
+          </div>
+        )}
+
+        {filteredProjects.length === 0 ? (
+          <div className="text-center py-12">
+            <p className="text-gray-500 dark:text-gray-400 text-lg">No projects found using {selectedSkill}.</p>
+            <button
+              onClick={onClearFilter}
+              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+            >
+              Show All Projects
+            </button>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-2 gap-8">
+            {filteredProjects.map((project) => (
+              <ProjectCard key={project.id} project={project} />
+            ))}
+          </div>
+        )}
       </div>
     </section>
   );

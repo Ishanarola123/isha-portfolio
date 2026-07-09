@@ -146,7 +146,9 @@
         "MongoDB",
         "Recharts",
         "Material UI",
-        "AWS Amplify"
+        "AWS Amplify",
+        "Cognito",
+        "GraphQl"
       ],
       "description": "Comprehensive administrative web application designed to streamline organizational workflows and provide advanced data visualization for internal and external users.",
       "features": [
@@ -174,11 +176,15 @@
         "Zustand",
         "SWR",
         "JEST",
+        "D3 JS",
         "AWS Amplify",
         "Cognito",
         "NodeJS",
+        "ExpressJS",
         "MySQL",
-        "Docker"
+        "Docker",
+        "Redis",
+        "Metabase Dashboards"
       ],
       "liveUrl": "https://app.recouple.au/",
       "stageUrl": "https://uat.recouple.au/",
@@ -252,7 +258,9 @@
         "Firebase",
         "Socket",
         "D3.js",
-        "Electron JS"
+        "Electron JS",
+        "Python",
+        "AI-Chatboat"
       ],
       "liveUrl": "https://techeeta-analytics-platform.web.app/auth/sign-in",
       "stageUrl": "https://techeeta-analytics-stage.web.app",
@@ -271,7 +279,8 @@
         "Session management for multiple teams",
         "Multi-language localization",
         "Excel data export functionality",
-        "Hub device integration with Electron desktop application"
+        "Hub device integration with Electron desktop application",
+        "Chatboat"
       ],
       "status": "Live",
       "duration": "2024-Present"

@@ -87,7 +87,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                 </div>
               </a>
 
-              <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
+              {/* <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-green-100 dark:bg-green-900 rounded-lg flex items-center justify-center">
                   <Phone className="w-6 h-6 text-green-600 dark:text-green-400" />
                 </div>
@@ -99,7 +99,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
                     {personalInfo.phone}
                   </p>
                 </div>
-              </div>
+              </div> */}
 
               <div className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-md">
                 <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-lg flex items-center justify-center">
@@ -198,11 +198,10 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
               <button
                 type="submit"
                 disabled={loading}
-                className={`w-full bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 font-medium transition-colors ${
-                  loading
+                className={`w-full bg-blue-600 text-white px-6 py-3 rounded-lg flex items-center justify-center gap-2 font-medium transition-colors ${loading
                     ? "opacity-70 cursor-not-allowed"
                     : "hover:bg-blue-700"
-                }`}
+                  }`}
               >
                 {loading ? (
                   <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin" />

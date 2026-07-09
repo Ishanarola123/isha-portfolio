@@ -8,10 +8,9 @@ import {
   Award,
   Menu,
   X,
+  Download,
 } from "lucide-react";
 import { NavigationItem } from "../types";
-import ResumeDownloadButton from "./resume-generator/ResumeDownloadButton";
-import portfolioData from "../data/portfolio.json"; // Adjust path as needed
 
 interface HeaderProps {
   activeSection: string;
@@ -63,12 +62,16 @@ const Header: React.FC<HeaderProps> = ({
               );
             })}
 
-            {/* <div className="desktop-download-wrapper">
-              <ResumeDownloadButton
-                portfolioData={portfolioData}
-                isMobile={false}
-              />
-            </div> */}
+            <a
+              href="/cv/CV-Isha Narola.pdf"
+              download="CV-Isha Narola.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
+            >
+              <Download className="w-4 h-4" />
+              Download CV
+            </a>
           </div>
 
           <div className="md:hidden flex items-center space-x-4 mobile-menu-button-wrapper">
@@ -114,6 +117,18 @@ const Header: React.FC<HeaderProps> = ({
                 </button>
               );
             })}
+
+            <a
+              href="/cv/CV-Isha Narola.pdf"
+              download="CV-Isha Narola.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              onClick={onMenuToggle}
+              className="flex items-center gap-2 w-full px-3 py-2 rounded-lg transition-all duration-300 text-gray-700 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 font-medium"
+            >
+              <Download className="w-4 h-4" />
+              Download CV
+            </a>
           </div>
         </div>
       )}

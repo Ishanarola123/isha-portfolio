@@ -37,9 +37,9 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
               {project.title}
             </h3>
-            <p className="text-sm text-gray-600 dark:text-gray-400">
+            {/* <p className="text-sm text-gray-600 dark:text-gray-400">
               {project.company}
-            </p>
+            </p> */}
           </div>
           <div className="flex gap-2">
             {project.liveUrl && (
@@ -134,43 +134,43 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 const Projects: React.FC<ProjectsProps> = ({ projects, selectedSkill, onClearFilter }) => {
   const filteredProjects = selectedSkill
     ? projects.filter((project) => {
-        const skillLower = selectedSkill.toLowerCase();
-        
-        // Node & Express match NodeJS or ExpressJS or Express
-        if (skillLower.includes("node") && skillLower.includes("express")) {
-          return project.technologies.some(
-            (tech) => {
-              const techLower = tech.toLowerCase();
-              return techLower.includes("node") || techLower.includes("express");
-            }
-          );
-        }
-        
-        // Cursor matches Cursor AI, Cursor, etc.
-        if (skillLower.includes("cursor")) {
-          return project.technologies.some(
-            (tech) => tech.toLowerCase().includes("cursor")
-          );
-        }
+      const skillLower = selectedSkill.toLowerCase();
 
-        // Material UI matches Material-UI, MUI, Material UI, MaterialUI
-        if (skillLower.includes("material") || skillLower.includes("mui")) {
-          return project.technologies.some(
-            (tech) => {
-              const techLower = tech.toLowerCase();
-              return techLower.includes("material") || techLower.includes("mui");
-            }
-          );
-        }
+      // Node & Express match NodeJS or ExpressJS or Express
+      if (skillLower.includes("node") && skillLower.includes("express")) {
+        return project.technologies.some(
+          (tech) => {
+            const techLower = tech.toLowerCase();
+            return techLower.includes("node") || techLower.includes("express");
+          }
+        );
+      }
 
-        // Default match (sub-string match)
-        return project.technologies.some((tech) => {
-          const techLower = tech.toLowerCase();
-          const normalizedTech = techLower.replace(/js$/, "");
-          const normalizedSkill = skillLower.replace(/js$/, "");
-          return normalizedTech.includes(normalizedSkill) || normalizedSkill.includes(normalizedTech);
-        });
-      })
+      // Cursor matches Cursor AI, Cursor, etc.
+      if (skillLower.includes("cursor")) {
+        return project.technologies.some(
+          (tech) => tech.toLowerCase().includes("cursor")
+        );
+      }
+
+      // Material UI matches Material-UI, MUI, Material UI, MaterialUI
+      if (skillLower.includes("material") || skillLower.includes("mui")) {
+        return project.technologies.some(
+          (tech) => {
+            const techLower = tech.toLowerCase();
+            return techLower.includes("material") || techLower.includes("mui");
+          }
+        );
+      }
+
+      // Default match (sub-string match)
+      return project.technologies.some((tech) => {
+        const techLower = tech.toLowerCase();
+        const normalizedTech = techLower.replace(/js$/, "");
+        const normalizedSkill = skillLower.replace(/js$/, "");
+        return normalizedTech.includes(normalizedSkill) || normalizedSkill.includes(normalizedTech);
+      });
+    })
     : projects;
 
   return (

@@ -1,3 +1,5 @@
+'use client';
+
 import React from "react";
 import { Award, Trophy, Code2, Target } from "lucide-react";
 import { CertificationCategory } from "../types";
@@ -8,60 +10,62 @@ interface CertificationsProps {
 
 const Certifications: React.FC<CertificationsProps> = ({ certifications }) => {
   const getCategoryIcon = (category: string) => {
-    if (category.includes("Technical")) return <Code2 className="w-6 h-6" />;
-    if (category.includes("Competition")) return <Trophy className="w-6 h-6" />;
-    if (category.includes("Hackathons")) return <Target className="w-6 h-6" />;
-    return <Award className="w-6 h-6" />;
+    if (category.includes("Technical")) return <Code2 className="w-5 h-5" />;
+    if (category.includes("Competition")) return <Trophy className="w-5 h-5" />;
+    if (category.includes("Hackathons")) return <Target className="w-5 h-5" />;
+    return <Award className="w-5 h-5" />;
   };
 
   const getCategoryColor = (category: string) => {
     if (category.includes("Technical"))
-      return "bg-blue-100 dark:bg-blue-900 text-blue-600 dark:text-blue-400";
+      return "bg-blue-500/10 text-blue-400 border border-blue-500/20";
     if (category.includes("Competition"))
-      return "bg-yellow-100 dark:bg-yellow-900 text-yellow-600 dark:text-yellow-400";
+      return "bg-yellow-500/10 text-yellow-400 border border-yellow-500/20";
     if (category.includes("Hackathons"))
-      return "bg-purple-100 dark:bg-purple-900 text-purple-600 dark:text-purple-400";
-    return "bg-green-100 dark:bg-green-900 text-green-600 dark:text-green-400";
+      return "bg-purple-500/10 text-purple-400 border border-purple-500/20";
+    return "bg-emerald-500/10 text-emerald-400 border border-emerald-500/20";
   };
 
   return (
-    <section
-      id="certifications"
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800"
-    >
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Certifications & Achievements
+    <section id="certifications" className="py-24 relative px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-400 uppercase mb-3">
+            <Award className="w-4 h-4" /> Credentials & Achievements
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-display font-bold text-slate-100">
+            Certifications & <span className="text-gradient">Awards</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            Professional certifications, competition wins, and notable
-            achievements
+          <p className="mt-4 text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+            Professional milestones, state-level coding contest wins, and achievements.
           </p>
         </div>
 
+        {/* Grid layout */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
           {certifications.map((cert, index) => (
             <div
               key={index}
-              className="bg-gray-50 dark:bg-gray-700 rounded-xl p-6 hover:shadow-lg transition-all duration-300"
+              className="glass-card p-6 rounded-2xl border border-slate-800/80 hover:shadow-lg transition-all duration-300"
             >
-              <div className="flex items-center gap-3 mb-4">
+              {/* Category Header */}
+              <div className="flex items-center gap-3 mb-6">
                 <div
-                  className={`w-12 h-12 rounded-lg flex items-center justify-center ${getCategoryColor(
+                  className={`w-10 h-10 rounded-xl flex items-center justify-center border ${getCategoryColor(
                     cert.category
                   )}`}
                 >
                   {getCategoryIcon(cert.category)}
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 dark:text-white">
+                <h3 className="text-lg font-bold text-white">
                   {cert.category}
                 </h3>
               </div>
 
-              <ul className="space-y-3">
+              {/* Items List */}
+              <ul className="space-y-4">
                 {cert.items.map((rawItem, itemIndex) => {
-                  // support legacy string items and new objects with title, optional url, and optional image
                   const isString = typeof rawItem === "string";
                   const title = isString ? rawItem : (rawItem as any).title;
                   const url = isString ? undefined : (rawItem as any).url;
@@ -70,21 +74,18 @@ const Certifications: React.FC<CertificationsProps> = ({ certifications }) => {
                   return (
                     <li
                       key={itemIndex}
-                      className="flex items-start gap-3 text-gray-700 dark:text-gray-300 text-sm"
+                      className="flex items-start gap-3 text-slate-300 text-xs sm:text-sm leading-relaxed"
                     >
                       <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
 
-                      {/* If image exists, show a small thumbnail and make it open the full image in a new tab */}
                       {image ? (
-                        <div className="flex items-center gap-3">
-                          {/* <img src={image} alt={title} className="w-20 h-auto rounded-md shadow-sm object-cover" /> */}
-                          {/* Title links to url if provided; otherwise links to image (opens full image in new tab) */}
+                        <div className="flex flex-col gap-1">
                           {url ? (
                             <a
                               href={url}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="leading-relaxed text-blue-600 dark:text-blue-400 hover:underline"
+                              className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
                             >
                               {title}
                             </a>
@@ -93,7 +94,7 @@ const Certifications: React.FC<CertificationsProps> = ({ certifications }) => {
                               href={image}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="leading-relaxed text-blue-600 dark:text-blue-400 hover:underline"
+                              className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
                             >
                               {title}
                             </a>
@@ -104,12 +105,12 @@ const Certifications: React.FC<CertificationsProps> = ({ certifications }) => {
                           href={url}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="leading-relaxed text-blue-600 dark:text-blue-400 hover:underline"
+                          className="text-blue-400 hover:text-blue-300 hover:underline transition-colors"
                         >
                           {title}
                         </a>
                       ) : (
-                        <span className="leading-relaxed">{title}</span>
+                        <span>{title}</span>
                       )}
                     </li>
                   );

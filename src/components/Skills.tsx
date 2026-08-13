@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from "react";
 import { Skills as SkillsType } from "../types";
 
@@ -172,92 +174,80 @@ const Skills: React.FC<SkillsProps> = ({ skills, selectedSkill, onSelectSkill })
   };
 
   return (
-    <section
-      id="skills"
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-slate-50 dark:bg-slate-900 border-b border-gray-100 dark:border-gray-800 transition-colors duration-500"
-    >
-      <div className="container mx-auto">
-        {/* Skills Universe Box */}
-        <div className="bg-[#0b0914] text-white rounded-3xl p-8 md:p-12 shadow-2xl border border-indigo-950/40 relative overflow-hidden mb-12">
-          {/* Cosmic background effects */}
-          <div className="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-[100px] pointer-events-none" />
-          
-          <div className="text-center mb-10 relative z-10">
-            <h2 className="text-3xl md:text-5xl font-extrabold tracking-tight mb-4">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-indigo-300 to-cyan-400">
-                Skills Universe
-              </span>
-            </h2>
-            <p className="text-gray-400 text-base md:text-lg max-w-2xl mx-auto">
-              Interactive showcase of my core technologies. Click a card to filter my featured projects!
-            </p>
+    <section id="skills" className="py-24 relative px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Skills Universe Title */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-blue-400 uppercase mb-3">
+            ⚛️ Technical Proficiency
           </div>
+          <h2 className="text-3xl sm:text-5xl font-display font-bold text-slate-100">
+            Skills <span className="text-gradient">Universe</span>
+          </h2>
+          <p className="mt-4 text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+            An interactive overview of core frameworks, mobile design patterns, databases, and developer tooling. Click to filter projects.
+          </p>
+        </div>
 
-          {/* Cards Grid */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 relative z-10">
-            {mainSkills.map((skill) => {
-              const isSelected = selectedSkill === skill.key;
-              return (
-                <button
-                  key={skill.name}
-                  onClick={() => onSelectSkill?.(skill.key)}
-                  className={`
-                    group flex flex-col items-center justify-center p-6 rounded-2xl border text-center relative
-                    transition-all duration-300 cursor-pointer select-none outline-none
-                    ${skill.bgClass} ${skill.borderColorClass} ${skill.glowClass}
-                    ${isSelected ? skill.activeClass : ""}
-                  `}
-                >
-                  {/* Primary Pulsing Badge */}
-                  {skill.isPrimary && (
-                    <span className="absolute top-3 right-3 text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-[0_0_10px_rgba(59,130,246,0.5)]">
-                      Primary
-                    </span>
-                  )}
-
-                  {/* Icon wrapper */}
-                  <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
-                    {skill.icon}
-                  </div>
-
-                  {/* Name */}
-                  <span className={`text-base font-bold tracking-wide transition-colors ${skill.textColor}`}>
-                    {skill.name}
+        {/* Core Main Skills Grid */}
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 mb-16">
+          {mainSkills.map((skill) => {
+            const isSelected = selectedSkill === skill.key;
+            return (
+              <button
+                key={skill.name}
+                onClick={() => onSelectSkill?.(skill.key)}
+                className={`
+                  group flex flex-col items-center justify-center p-6 rounded-2xl border text-center relative
+                  transition-all duration-300 cursor-pointer select-none outline-none glass-card
+                  ${skill.borderColorClass} ${skill.glowClass}
+                  ${isSelected ? skill.activeClass : ""}
+                `}
+              >
+                {skill.isPrimary && (
+                  <span className="absolute top-3 right-3 text-[9px] uppercase font-bold tracking-wider px-2 py-0.5 rounded-full bg-gradient-to-r from-blue-500 to-indigo-600 text-white shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                    Primary
                   </span>
+                )}
 
-                  {/* Selection indicator dots */}
-                  {isSelected && (
-                    <span className="absolute bottom-3 w-1.5 h-1.5 rounded-full bg-current" />
-                  )}
-                </button>
-              );
-            })}
-          </div>
+                <div className="mb-4 transform group-hover:scale-110 transition-transform duration-300">
+                  {skill.icon}
+                </div>
+
+                <span className={`text-base font-bold tracking-wide transition-colors ${skill.textColor}`}>
+                  {skill.name}
+                </span>
+
+                {isSelected && (
+                  <span className="absolute bottom-3 w-1.5 h-1.5 rounded-full bg-current animate-ping" />
+                )}
+              </button>
+            );
+          })}
         </div>
 
         {/* Detailed Skills Browser */}
-        <div className="bg-white dark:bg-gray-800 rounded-3xl p-6 md:p-10 border border-gray-200/80 dark:border-gray-700 shadow-xl transition-all duration-300">
+        <div className="glass-panel rounded-3xl p-8 md:p-10 shadow-2xl relative overflow-hidden">
           <div className="text-center mb-8">
-            <h3 className="text-2xl font-bold text-gray-900 dark:text-white">
+            <h3 className="text-2xl font-bold text-white">
               All Technical Expertise
             </h3>
-            <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
+            <p className="text-sm text-slate-400 mt-1">
               Browse the complete inventory of my engineering capabilities
             </p>
           </div>
           
           {/* Tabs Navigation */}
-          <div className="flex flex-wrap justify-center gap-2 mb-8 border-b border-gray-200 dark:border-gray-700 pb-5">
+          <div className="flex flex-wrap justify-center gap-2 mb-8 border-b border-slate-800/80 pb-5">
             {tabGroups.map((tab) => (
               <button
                 key={tab.id}
                 onClick={() => setActiveTab(tab.id)}
                 className={`
-                  px-4 py-2 rounded-xl text-sm font-bold transition-all duration-300
+                  px-4 py-2 rounded-full text-xs sm:text-sm font-semibold transition-all duration-300 bg-transparent border cursor-pointer
                   ${activeTab === tab.id
-                    ? "bg-blue-600 text-white shadow-lg shadow-blue-500/25 scale-[1.02]"
-                    : "text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700/50 hover:text-gray-900 dark:hover:text-white"
+                    ? "bg-blue-600/30 text-white border-blue-500/50 shadow-md scale-[1.02]"
+                    : "border-slate-700 text-slate-400 hover:text-white hover:border-slate-600"
                   }
                 `}
               >
@@ -277,16 +267,16 @@ const Skills: React.FC<SkillsProps> = ({ skills, selectedSkill, onSelectSkill })
                 return (
                   <div
                     key={category}
-                    className="bg-gray-50 dark:bg-gray-900/40 border border-gray-200 dark:border-gray-700/50 rounded-2xl p-6 hover:shadow-md transition-all duration-300"
+                    className="glass-card p-6 rounded-2xl border border-slate-800/50 hover:shadow-md transition-all duration-300"
                   >
-                    <h4 className="text-base font-extrabold text-gray-900 dark:text-white mb-4 border-b border-gray-200 dark:border-gray-700 pb-2 uppercase tracking-wider text-xs">
+                    <h4 className="text-xs font-extrabold text-blue-400 mb-4 border-b border-slate-800 pb-2 uppercase tracking-widest">
                       {formatCategoryName(category)}
                     </h4>
                     <div className="flex flex-wrap gap-2">
                       {skillList.map((skill: string, idx: number) => (
                         <span
                           key={idx}
-                          className="px-3.5 py-1.5 bg-white dark:bg-gray-800 text-gray-800 dark:text-gray-200 text-sm font-semibold rounded-full border border-gray-200 dark:border-gray-700 shadow-sm hover:scale-[1.03] hover:border-blue-500 dark:hover:border-blue-400 transition-all duration-300"
+                          className="px-3.5 py-1.5 glass-card text-slate-300 text-xs sm:text-sm font-medium rounded-full border border-slate-800 hover:border-blue-400 hover:text-white transition-all duration-300"
                         >
                           {skill}
                         </span>

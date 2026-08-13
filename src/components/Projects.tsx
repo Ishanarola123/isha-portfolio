@@ -1,5 +1,7 @@
+'use client';
+
 import React, { useState } from "react";
-import { ExternalLink, Users, Calendar, X } from "lucide-react";
+import { ExternalLink, Users, Calendar, X, Sparkles, FolderGit2, ArrowRight } from "lucide-react";
 import { Project } from "../types";
 
 interface ProjectsProps {
@@ -8,130 +10,9 @@ interface ProjectsProps {
   onClearFilter?: () => void;
 }
 
-interface ProjectCardProps {
-  project: Project;
-}
-
-const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
-  const [showAllFeatures, setShowAllFeatures] = useState(false);
-
-  const getStatusColor = (status: string | undefined) => {
-    switch (status) {
-      case "Live":
-        return "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200";
-      case "Completed":
-        return "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200";
-      case "In Development":
-        return "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200";
-      default:
-        return "bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200";
-    }
-  };
-
-  return (
-    <div className="bg-white dark:bg-gray-800 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden group">
-      <div className="p-6">
-        {/* Header */}
-        <div className="flex justify-between items-start mb-4">
-          <div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-              {project.title}
-            </h3>
-            {/* <p className="text-sm text-gray-600 dark:text-gray-400">
-              {project.company}
-            </p> */}
-          </div>
-          <div className="flex gap-2">
-            {project.liveUrl && (
-              <a
-                href={project.liveUrl}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 bg-blue-100 text-blue-600 rounded-lg hover:bg-blue-200 transition-colors"
-              >
-                <ExternalLink className="w-4 h-4" />
-              </a>
-            )}
-          </div>
-        </div>
-
-        <p className="text-gray-700 dark:text-gray-300 mb-4">
-          {project.description}
-        </p>
-
-        {/* Project Info */}
-        <div className="mb-4">
-          <div className="flex items-center gap-4 text-sm text-gray-600 dark:text-gray-400 mb-2">
-            <span className="flex items-center gap-1">
-              <Users className="w-4 h-4" />
-              Team: {project.teamSize}
-            </span>
-            <span className="flex items-center gap-1">
-              <Calendar className="w-4 h-4" />
-              {project.duration}
-            </span>
-          </div>
-          <span
-            className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${getStatusColor(
-              project.status
-            )}`}
-          >
-            {project.status}
-          </span>
-        </div>
-
-        {/* Features */}
-        <div className="mb-4">
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-            Key Features:
-          </h4>
-          <ul className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
-            {(showAllFeatures
-              ? project.features
-              : project.features.slice(0, 3)
-            ).map((feature, index) => (
-              <li key={index} className="flex items-start gap-2">
-                <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 flex-shrink-0"></span>
-                {feature}
-              </li>
-            ))}
-            {project.features.length > 3 && (
-              <li>
-                <button
-                  onClick={() => setShowAllFeatures(!showAllFeatures)}
-                  className="text-blue-600 dark:text-blue-400 text-xs underline hover:text-blue-800 dark:hover:text-blue-300"
-                >
-                  {showAllFeatures
-                    ? "Show less"
-                    : `+${project.features.length - 3} more features`}
-                </button>
-              </li>
-            )}
-          </ul>
-        </div>
-
-        {/* Technologies */}
-        <div>
-          <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-            Technologies:
-          </h4>
-          <div className="flex flex-wrap gap-2">
-            {project.technologies.map((tech, index) => (
-              <span
-                key={index}
-                className="px-2 py-1 bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded text-xs"
-              >
-                {tech}
-              </span>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
-  );
-};
-
 const Projects: React.FC<ProjectsProps> = ({ projects, selectedSkill, onClearFilter }) => {
+  const [activeProject, setActiveProject] = useState<Project | null>(null);
+
   const filteredProjects = selectedSkill
     ? projects.filter((project) => {
       const skillLower = selectedSkill.toLowerCase();
@@ -173,30 +54,68 @@ const Projects: React.FC<ProjectsProps> = ({ projects, selectedSkill, onClearFil
     })
     : projects;
 
+  const getGradient = (id: number) => {
+    const gradients = [
+      "from-blue-900/60 via-purple-900/40 to-slate-900",
+      "from-purple-900/60 via-pink-900/40 to-slate-900",
+      "from-emerald-900/60 via-teal-900/40 to-slate-900",
+      "from-rose-900/60 via-orange-900/40 to-slate-900",
+      "from-indigo-900/60 via-blue-900/40 to-slate-900",
+      "from-cyan-900/60 via-sky-900/40 to-slate-900"
+    ];
+    return gradients[id % gradients.length];
+  };
+
+  const getIconColor = (id: number) => {
+    const colors = [
+      "text-blue-400",
+      "text-purple-400",
+      "text-emerald-400",
+      "text-rose-400",
+      "text-indigo-400",
+      "text-cyan-400"
+    ];
+    return colors[id % colors.length];
+  };
+
+  const getBorderHover = (id: number) => {
+    const borders = [
+      "hover:border-blue-500/40",
+      "hover:border-purple-500/40",
+      "hover:border-emerald-500/40",
+      "hover:border-rose-500/40",
+      "hover:border-indigo-500/40",
+      "hover:border-cyan-500/40"
+    ];
+    return borders[id % borders.length];
+  };
+
   return (
-    <section
-      id="projects"
-      className="py-16 px-4 sm:px-6 lg:px-8 bg-white dark:bg-gray-800"
-    >
-      <div className="container mx-auto">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Featured Projects
+    <section id="projects" className="py-24 relative px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto">
+        {/* Section Header */}
+        <div className="text-center mb-16">
+          <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-cyan-400 uppercase mb-3">
+            <FolderGit2 className="w-4 h-4" /> Showcased Innovations
+          </div>
+          <h2 className="text-3xl sm:text-5xl font-display font-bold text-slate-100">
+            Featured <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-lg text-gray-600 dark:text-gray-400">
-            Showcasing innovative solutions and technical expertise
+          <p className="mt-4 text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
+            Explore real-world applications featuring clean architecture, responsive layouts, and robust backend integrations.
           </p>
         </div>
 
+        {/* Selected Skill Badge Filter */}
         {selectedSkill && (
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-50 dark:bg-blue-950/40 border border-blue-200 dark:border-blue-800/85 rounded-full shadow-sm">
-              <span className="text-sm text-gray-700 dark:text-gray-300">
-                Filtered by <strong className="text-blue-600 dark:text-blue-400">{selectedSkill}</strong>
+          <div className="flex justify-center mb-12">
+            <div className="inline-flex items-center gap-3 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full shadow-sm">
+              <span className="text-sm text-slate-300">
+                Filtered by <strong className="text-blue-400">{selectedSkill}</strong>
               </span>
               <button
                 onClick={onClearFilter}
-                className="p-1 hover:bg-blue-100 dark:hover:bg-blue-900 rounded-full text-gray-500 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+                className="p-1 hover:bg-blue-500/20 rounded-full text-slate-400 hover:text-white transition-colors bg-transparent border-0 cursor-pointer"
                 title="Clear filter"
               >
                 <X className="w-4 h-4" />
@@ -205,24 +124,162 @@ const Projects: React.FC<ProjectsProps> = ({ projects, selectedSkill, onClearFil
           </div>
         )}
 
+        {/* Empty State */}
         {filteredProjects.length === 0 ? (
-          <div className="text-center py-12">
-            <p className="text-gray-500 dark:text-gray-400 text-lg">No projects found using {selectedSkill}.</p>
+          <div className="text-center py-16 glass-panel rounded-3xl max-w-md mx-auto p-8">
+            <p className="text-slate-400 text-lg">No projects found using {selectedSkill}.</p>
             <button
               onClick={onClearFilter}
-              className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+              className="mt-6 px-6 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:scale-105 transition-transform border-0 cursor-pointer"
             >
               Show All Projects
             </button>
           </div>
         ) : (
-          <div className="grid md:grid-cols-2 gap-8">
+          /* Projects Grid */
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredProjects.map((project) => (
-              <ProjectCard key={project.id} project={project} />
+              <div
+                key={project.id}
+                className={`glass-card rounded-2xl overflow-hidden flex flex-col group border border-slate-800 transition-all duration-300 ${getBorderHover(
+                  project.id
+                )}`}
+              >
+                {/* Visual Header */}
+                <div className={`h-48 bg-gradient-to-tr ${getGradient(project.id)} relative p-6 flex flex-col justify-between overflow-hidden`}>
+                  <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
+                  <div className="flex items-center justify-between z-10">
+                    <span className="px-3 py-1 rounded-full text-[10px] font-mono bg-slate-900/60 text-slate-300 border border-slate-700/50">
+                      {project.company}
+                    </span>
+                    <Sparkles className={`w-5 h-5 ${getIconColor(project.id)}`} />
+                  </div>
+                  <div className="z-10">
+                    <h3 className="text-2xl font-bold text-white group-hover:text-blue-300 transition-colors">
+                      {project.title}
+                    </h3>
+                    <p className="text-[10px] text-slate-300 font-mono mt-1">
+                      {project.duration}
+                    </p>
+                  </div>
+                </div>
+
+                {/* Project Brief Info */}
+                <div className="p-6 flex-1 flex flex-col justify-between">
+                  <div>
+                    <p className="text-slate-300 text-sm leading-relaxed mb-4 line-clamp-3">
+                      {project.description}
+                    </p>
+
+                    <div className="flex items-center gap-4 text-xs text-slate-400 mb-6">
+                      <span className="flex items-center gap-1">
+                        <Users className="w-3.5 h-3.5 text-blue-400" />
+                        Team: {project.teamSize}
+                      </span>
+                      {project.status && (
+                        <span className="px-2.5 py-0.5 rounded-full text-[10px] font-semibold bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
+                          {project.status}
+                        </span>
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+                    <button
+                      onClick={() => setActiveProject(project)}
+                      className="text-xs font-semibold text-blue-400 hover:text-blue-300 flex items-center gap-1 group/btn bg-transparent border-0 cursor-pointer"
+                    >
+                      <span>Details & Features</span>
+                      <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
+                    </button>
+                    
+                    {project.liveUrl && (
+                      <a
+                        href={project.liveUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-slate-400 hover:text-white transition-colors"
+                        title="Open live app"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                      </a>
+                    )}
+                  </div>
+                </div>
+              </div>
             ))}
           </div>
         )}
       </div>
+
+      {/* Details Modal popup */}
+      {activeProject && (
+        <div className="fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+          <div className="glass-panel max-w-2xl w-full rounded-3xl p-6 sm:p-8 relative border border-blue-500/30 shadow-2xl animate-in fade-in zoom-in-95 duration-250">
+            <button
+              onClick={() => setActiveProject(null)}
+              className="absolute top-5 right-5 text-slate-400 hover:text-white p-2 rounded-full hover:bg-slate-800/60 bg-transparent border-0 cursor-pointer"
+            >
+              <X className="w-5 h-5" />
+            </button>
+            
+            <span className="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2 block">
+              {activeProject.company}
+            </span>
+            <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">{activeProject.title}</h3>
+            
+            <div className="flex flex-wrap gap-2 mb-6">
+              {activeProject.technologies.map((tech) => (
+                <span
+                  key={tech}
+                  className="text-[10px] sm:text-xs font-mono px-2.5 py-1 rounded-md bg-blue-500/10 text-blue-300 border border-blue-500/20"
+                >
+                  {tech}
+                </span>
+              ))}
+            </div>
+
+            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Description</h4>
+            <p className="text-sm text-slate-300 leading-relaxed mb-6">{activeProject.description}</p>
+
+            <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Key Features</h4>
+            <ul className="text-xs sm:text-sm text-slate-300 space-y-2 mb-6 max-h-48 overflow-y-auto no-scrollbar pr-2">
+              {activeProject.features.map((feature, index) => (
+                <li key={index} className="flex items-start gap-2.5">
+                  <span className="w-1.5 h-1.5 bg-blue-500 rounded-full mt-2 shrink-0"></span>
+                  <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+              <span className="text-xs text-slate-400 font-mono">
+                Duration: {activeProject.duration} | Team Size: {activeProject.teamSize}
+              </span>
+              
+              <div className="flex gap-3">
+                {activeProject.liveUrl && (
+                  <a
+                    href={activeProject.liveUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-full text-xs font-semibold shadow-md transition-colors"
+                  >
+                    <span>View Live</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </a>
+                )}
+                <button
+                  onClick={() => setActiveProject(null)}
+                  className="px-5 py-2 rounded-full border border-slate-700 hover:border-slate-600 text-slate-300 hover:text-white text-xs font-semibold bg-transparent cursor-pointer"
+                >
+                  Close Preview
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

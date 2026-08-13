@@ -10,6 +10,8 @@ import Education from '../components/Education';
 import Certifications from '../components/Certifications';
 import Contact from '../components/Contact';
 import Footer from '../components/Footer';
+import ParticleBackground from '../components/ParticleBackground';
+import AiChatWidget from '../components/AiChatWidget';
 import portfolioData from '../data/portfolio.json';
 
 export default function Home() {
@@ -17,6 +19,7 @@ export default function Home() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isLoaded, setIsLoaded] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
+  const [isAiChatOpen, setIsAiChatOpen] = useState(false);
 
   useEffect(() => {
     setIsLoaded(true);
@@ -65,13 +68,20 @@ export default function Home() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const toggleAiChat = () => {
+    setIsAiChatOpen(!isAiChatOpen);
+  };
+
   return (
-    <div className="min-h-screen bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-900 dark:to-blue-900">
+    <div className="relative min-h-screen text-slate-100 bg-[#090d16] font-sans selection:bg-blue-500 selection:text-white">
+      <ParticleBackground />
+      
       <Header
         activeSection={activeSection}
         isMenuOpen={isMenuOpen}
         onMenuToggle={handleMenuToggle}
         onSectionClick={scrollToSection}
+        onToggleAiChat={toggleAiChat}
       />
       
       <main>
@@ -95,6 +105,7 @@ export default function Home() {
         
         <Experience
           experience={portfolioData.experience}
+          internships={portfolioData.internships}
         />
         
         <Projects
@@ -117,6 +128,11 @@ export default function Home() {
       </main>
       
       <Footer />
+
+      <AiChatWidget
+        isOpen={isAiChatOpen}
+        onToggle={toggleAiChat}
+      />
     </div>
   );
 }

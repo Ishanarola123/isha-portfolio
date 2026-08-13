@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import { Mail, Phone, MapPin, Linkedin, Github, Rocket, FileText, ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 import { PersonalInfo } from "../types";
 
 interface HeroProps {
@@ -51,7 +52,12 @@ const Hero: React.FC<HeroProps> = ({ personalInfo, isLoaded }) => {
 
   return (
     <section id="home" className="min-h-screen pt-32 pb-20 flex items-center justify-center relative px-4 sm:px-6 lg:px-8">
-      <div className="max-w-5xl mx-auto text-center flex flex-col items-center">
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-5xl mx-auto text-center flex flex-col items-center"
+      >
         {/* Availability Pill Badge */}
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full glass-card border border-emerald-500/30 text-emerald-400 text-xs sm:text-sm font-medium mb-8 animate-float">
           <span className="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
@@ -149,7 +155,7 @@ const Hero: React.FC<HeroProps> = ({ personalInfo, isLoaded }) => {
             <div className="text-xs sm:text-sm text-slate-400">Technologies Mastered</div>
           </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 };

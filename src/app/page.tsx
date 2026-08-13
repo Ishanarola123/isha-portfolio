@@ -22,6 +22,41 @@ export default function Home() {
   const [isAiChatOpen, setIsAiChatOpen] = useState(false);
 
   useEffect(() => {
+    const titleText = "Isha Narola | Senior Consultant";
+    let charIdx = 0;
+    let isDeletingText = false;
+    let timeoutId: NodeJS.Timeout;
+
+    const animateTitle = () => {
+      if (isDeletingText) {
+        document.title = titleText.substring(0, charIdx - 1) + "_";
+        charIdx--;
+      } else {
+        document.title = titleText.substring(0, charIdx + 1) + (charIdx === titleText.length - 1 ? "" : "_");
+        charIdx++;
+      }
+
+      let speed = isDeletingText ? 85 : 150;
+
+      if (!isDeletingText && charIdx === titleText.length) {
+        speed = 3500; // Pause at full title
+        isDeletingText = true;
+      } else if (isDeletingText && charIdx === 0) {
+        isDeletingText = false;
+        speed = 1000; // Pause before starting to type again
+      }
+
+      timeoutId = setTimeout(animateTitle, speed);
+    };
+
+    animateTitle();
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
+  }, []);
+
+  useEffect(() => {
     setIsLoaded(true);
     
     // Intersection Observer for active section tracking
@@ -73,7 +108,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative min-h-screen text-slate-100 bg-[#090d16] font-sans selection:bg-blue-500 selection:text-white">
+    <div className="relative min-h-screen text-slate-100 font-sans selection:bg-blue-500 selection:text-white">
       <ParticleBackground />
       
       <Header

@@ -14,9 +14,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-xl font-bold mb-4">Isha Narola</h3>
             <p className="text-gray-400 leading-relaxed">
-              Senior Software Engineer passionate about creating scalable web
-              applications with modern technologies and delivering exceptional
-              user experiences.
+              Senior Consultant passionate about driving end-to-end project success,
+              accurate estimations, client communication, and building high-performance web applications.
             </p>
           </div>
 

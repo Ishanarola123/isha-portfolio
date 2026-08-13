@@ -6,27 +6,27 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Isha Narola - Senior Software Engineer",
+  title: "Isha Narola - Senior Consultant",
   description:
-    "Senior Software Engineer with 2.5+ years of expertise in ReactJS and NextJS development. Experienced in building scalable web applications with modern JavaScript frameworks.",
+    "Senior Consultant with 3+ years of expertise in ReactJS, NextJS development, client communication, and project estimation. Experienced in leading team delivery and building scalable web applications.",
   keywords:
-    "Isha Narola, Senior Software Engineer, ReactJS, NextJS, JavaScript, TypeScript, Full Stack Developer, Web Development, Gujarat, Surat",
+    "Isha Narola, Senior Consultant, Project Estimation, Client Communication, ReactJS, NextJS, JavaScript, TypeScript, Full Stack Developer, Web Development, Gujarat, Surat",
   authors: [{ name: "Isha Narola" }],
   creator: "Isha Narola",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://isha-narola-portfolio.vercel.app",
-    title: "Isha Narola - Senior Software Engineer",
+    title: "Isha Narola - Senior Consultant",
     description:
-      "Senior Software Engineer specializing in ReactJS, NextJS, and modern web technologies.",
+      "Senior Consultant specializing in ReactJS, NextJS, project estimation, and client communication.",
     siteName: "Isha Narola Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Isha Narola - Senior Software Engineer",
+    title: "Isha Narola - Senior Consultant",
     description:
-      "Senior Software Engineer specializing in ReactJS, NextJS, and modern web technologies.",
+      "Senior Consultant specializing in ReactJS, NextJS, project estimation, and client communication.",
   },
   robots: {
     index: true,

@@ -1,5 +1,5 @@
 import React from "react";
-import { Mail, Phone, MapPin, Linkedin, Github } from "lucide-react";
+import { Mail, Phone, MapPin, Linkedin, Github, MessageSquare, BarChart3, Sparkles } from "lucide-react";
 import { PersonalInfo } from "../types";
 
 interface HeroProps {
@@ -34,6 +34,22 @@ const Hero: React.FC<HeroProps> = ({ personalInfo, isLoaded }) => {
           <p className="text-lg text-gray-700 dark:text-gray-300 max-w-3xl mx-auto mb-8">
             {personalInfo.summary}
           </p>
+
+          {/* Highlight Badges for Senior Consultant Role */}
+          <div className="flex flex-wrap justify-center gap-4 mb-8 max-w-4xl mx-auto">
+            <span className="flex items-center gap-2 px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full text-sm font-medium border border-blue-100 dark:border-blue-800/50 shadow-sm transition-transform hover:scale-105">
+              <MessageSquare className="w-4 h-4" />
+              Client Communication
+            </span>
+            <span className="flex items-center gap-2 px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full text-sm font-medium border border-purple-100 dark:border-purple-800/50 shadow-sm transition-transform hover:scale-105">
+              <BarChart3 className="w-4 h-4" />
+              Project Estimation & Scope
+            </span>
+            <span className="flex items-center gap-2 px-4 py-2 bg-indigo-50 dark:bg-indigo-900/30 text-indigo-700 dark:text-indigo-300 rounded-full text-sm font-medium border border-indigo-100 dark:border-indigo-800/50 shadow-sm transition-transform hover:scale-105">
+              <Sparkles className="w-4 h-4" />
+              Technical Leadership
+            </span>
+          </div>
 
           <div className="flex flex-wrap justify-center gap-4 mb-8">
             <a

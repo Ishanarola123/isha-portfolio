@@ -1,13 +1,13 @@
 {
   "personalInfo": {
     "name": "Isha Narola ",
-    "title": "Senior Software Engineer",
+    "title": "Senior Consultant",
     "email": "ishanarola123@gmail.com",
     "phone": "",
     "address": "81-Akshardham Society-2, Ambatalavadi, Surat, Gujarat, India",
     "linkedin": "https://www.linkedin.com/in/isha-narola-390265237",
     "github": "https://github.com/Ishanarola123",
-    "summary": "Experienced Senior Software Engineer with 3+ years of expertise in ReactJS and NextJS development. Proven track record of building scalable web applications with modern JavaScript frameworks, state management solutions, and RESTful API integrations. Strong background in full-stack development with excellent problem-solving skills and ability to work independently or as part of a team."
+    "summary": "Experienced Senior Consultant with a strong background in software engineering, frontend technologies, and full-stack development. Proven track record of managing end-to-end project execution, accurate project estimation, and direct client communication. Expert in building scalable web applications with ReactJS and NextJS, while leading development teams and aligning technical solutions with business goals."
   },
   "skills": {
     "frontend": [
@@ -115,9 +115,12 @@
   },
   "experience": {
     "company": "Narola Infotech Solutions LLP",
-    "position": "Senior Software Engineer",
+    "position": "Senior Consultant",
     "duration": "February 2023- Present",
     "responsibilities": [
+      "Lead client communication, requirements elicitation, and stakeholder management to align engineering efforts with business goals",
+      "Conduct technical project estimation, scope definition, resource planning, and risk management",
+      "Oversee end-to-end project execution, architecture design, and technical decision-making",
       "Developed scalable web applications using ReactJS and NextJS",
       "Implemented state management solutions with Redux and Context API",
       "Built responsive UI components with modern design systems",

@@ -58,7 +58,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
             <Mail className="w-4 h-4" /> Get In Touch
           </div>
           <h2 className="text-3xl sm:text-5xl font-display font-bold text-slate-100">
-            Let's Build <span className="text-gradient">Together</span>
+            Let&apos;s Build <span className="text-gradient">Together</span>
           </h2>
           <p className="mt-4 text-slate-400 max-w-xl mx-auto text-sm sm:text-base">
             Have a project idea, consulting opportunity, or technical collaboration? Send a message directly.
@@ -117,7 +117,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
           {/* Interactive Message Form */}
           <div className="lg:col-span-7 glass-panel p-8 rounded-3xl relative">
             <h3 className="text-xl font-bold text-white mb-6">Send a Message</h3>
-            
+
             <form className="space-y-5" onSubmit={handleSubmit}>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
                 <div>

@@ -52,7 +52,7 @@ const Contact: React.FC<ContactProps> = ({ personalInfo }) => {
   return (
     <section id="contact" className="py-24 relative px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
-        {/* Section Header */}
+        {/* Section Header  */}
         <div className="text-center mb-16">
           <div className="inline-flex items-center gap-2 text-xs font-semibold tracking-widest text-purple-400 uppercase mb-3">
             <Mail className="w-4 h-4" /> Get In Touch

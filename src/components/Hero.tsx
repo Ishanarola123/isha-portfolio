@@ -1,22 +1,22 @@
 'use client';
 
 import React, { useState, useEffect } from "react";
-import { Mail, Phone, MapPin, Linkedin, Github, Rocket, FileText, ArrowRight } from "lucide-react";
+import { Linkedin, Github, Rocket, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import { PersonalInfo } from "../types";
 
 interface HeroProps {
   personalInfo: PersonalInfo;
-  isLoaded: boolean;
 }
 
-const Hero: React.FC<HeroProps> = ({ personalInfo, isLoaded }) => {
-  const roles = [
-    "Senior Consultant",
-    "React & Next.js Specialist",
-    "Technical Delivery Lead",
-    "Solutions Architect"
-  ];
+const roles = [
+  "Senior Consultant",
+  "React & Next.js Specialist",
+  "Technical Delivery Lead",
+  "Solutions Architect"
+];
+
+const Hero: React.FC<HeroProps> = ({ personalInfo }) => {
 
   const [currentRoleText, setCurrentRoleText] = useState("");
   const [roleIndex, setRoleIndex] = useState(0);
@@ -81,7 +81,7 @@ const Hero: React.FC<HeroProps> = ({ personalInfo, isLoaded }) => {
 
         {/* Name and Dynamic Role */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-display font-extrabold tracking-tight mb-4 text-white">
-          Hi, I'm <span className="text-gradient">{personalInfo.name.trim()}</span>
+          Hi, I&apos;m <span className="text-gradient">{personalInfo.name.trim()}</span>
         </h1>
 
         <div className="text-xl sm:text-2xl lg:text-3xl font-mono text-slate-300 h-10 mb-6 flex items-center justify-center">

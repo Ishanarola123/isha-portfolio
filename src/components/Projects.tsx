@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { ExternalLink, Users, Calendar, X, Sparkles, FolderGit2, ArrowRight } from "lucide-react";
+import { ExternalLink, Users, X, Sparkles, FolderGit2, ArrowRight } from "lucide-react";
 import { Project } from "../types";
 
 interface ProjectsProps {

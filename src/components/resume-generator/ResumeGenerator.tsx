@@ -1,5 +1,4 @@
 // components/ResumeGenerator.tsx
-import React from "react";
 
 // --- Interfaces for Portfolio Data ---
 interface PersonalInfo {

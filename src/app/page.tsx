@@ -17,7 +17,6 @@ import portfolioData from '../data/portfolio.json';
 export default function Home() {
   const [activeSection, setActiveSection] = useState('home');
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [selectedSkill, setSelectedSkill] = useState<string | null>(null);
   const [isAiChatOpen, setIsAiChatOpen] = useState(false);
 
@@ -57,8 +56,6 @@ export default function Home() {
   }, []);
 
   useEffect(() => {
-    setIsLoaded(true);
-    
     // Intersection Observer for active section tracking
     const observerOptions = {
       root: null,
@@ -122,7 +119,6 @@ export default function Home() {
       <main>
         <Hero
           personalInfo={portfolioData.personalInfo}
-          isLoaded={isLoaded}
         />
         
         <Skills

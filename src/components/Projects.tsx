@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from "react";
-import { ExternalLink, Users, X, Sparkles, FolderGit2, ArrowRight } from "lucide-react";
+import { ExternalLink, Users, X, Sparkles, FolderGit2, ArrowRight, Globe } from "lucide-react";
 import { Project } from "../types";
 
 interface ProjectsProps {
@@ -150,7 +150,7 @@ const Projects: React.FC<ProjectsProps> = ({ projects, selectedSkill, onClearFil
                   <div className="absolute top-0 right-0 w-32 h-32 bg-blue-500/10 rounded-full blur-2xl group-hover:scale-150 transition-transform"></div>
                   <div className="flex items-center justify-between z-10">
                     <span className="px-3 py-1 rounded-full text-[10px] font-mono bg-slate-900/60 text-slate-300 border border-slate-700/50">
-                      {project.company}
+                      {project.category || project.company}
                     </span>
                     <Sparkles className={`w-5 h-5 ${getIconColor(project.id)}`} />
                   </div>
@@ -193,17 +193,30 @@ const Projects: React.FC<ProjectsProps> = ({ projects, selectedSkill, onClearFil
                       <ArrowRight className="w-3.5 h-3.5 group-hover/btn:translate-x-1 transition-transform" />
                     </button>
                     
-                    {project.liveUrl && (
-                      <a
-                        href={project.liveUrl}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="text-slate-400 hover:text-white transition-colors"
-                        title="Open live app"
-                      >
-                        <ExternalLink className="w-4 h-4" />
-                      </a>
-                    )}
+                    <div className="flex items-center gap-2.5">
+                      {project.marketingUrl && (
+                        <a
+                          href={project.marketingUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-slate-400 hover:text-cyan-400 transition-colors"
+                          title="Visit Marketing Website"
+                        >
+                          <Globe className="w-4 h-4" />
+                        </a>
+                      )}
+                      {project.liveUrl && (
+                        <a
+                          href={project.liveUrl}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="text-slate-400 hover:text-white transition-colors"
+                          title="Open live app"
+                        >
+                          <ExternalLink className="w-4 h-4" />
+                        </a>
+                      )}
+                    </div>
                   </div>
                 </div>
               </div>
@@ -223,9 +236,12 @@ const Projects: React.FC<ProjectsProps> = ({ projects, selectedSkill, onClearFil
               <X className="w-5 h-5" />
             </button>
             
-            <span className="text-[10px] font-mono uppercase tracking-widest text-blue-400 mb-2 block">
-              {activeProject.company}
-            </span>
+            <div className="flex items-center gap-2 mb-2">
+              <span className="text-[10px] font-mono uppercase tracking-widest text-cyan-400 bg-cyan-500/10 px-2.5 py-0.5 rounded border border-cyan-500/20">
+                {activeProject.category || activeProject.company}
+              </span>
+              <span className="text-[10px] font-mono text-slate-400">• {activeProject.company}</span>
+            </div>
             <h3 className="text-2xl sm:text-3xl font-bold text-white mb-2">{activeProject.title}</h3>
             
             <div className="flex flex-wrap gap-2 mb-6">
@@ -252,21 +268,32 @@ const Projects: React.FC<ProjectsProps> = ({ projects, selectedSkill, onClearFil
               ))}
             </ul>
 
-            <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between">
+            <div className="pt-4 border-t border-slate-800/80 flex items-center justify-between flex-wrap gap-3">
               <span className="text-xs text-slate-400 font-mono">
                 Duration: {activeProject.duration} | Team Size: {activeProject.teamSize}
               </span>
               
-              <div className="flex gap-3">
+              <div className="flex flex-wrap items-center gap-2.5">
+                {activeProject.marketingUrl && (
+                  <a
+                    href={activeProject.marketingUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-slate-800 hover:bg-slate-700 text-cyan-300 border border-cyan-500/30 rounded-full text-xs font-semibold shadow-md transition-colors"
+                  >
+                    <Globe className="w-3.5 h-3.5" />
+                    <span>Marketing Site</span>
+                  </a>
+                )}
                 {activeProject.liveUrl && (
                   <a
                     href={activeProject.liveUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center gap-1 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-full text-xs font-semibold shadow-md transition-colors"
+                    className="flex items-center gap-1.5 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white rounded-full text-xs font-semibold shadow-md transition-colors"
                   >
                     <span>View Live</span>
-                    <ExternalLink className="w-3 h-3" />
+                    <ExternalLink className="w-3.5 h-3.5" />
                   </a>
                 )}
                 <button

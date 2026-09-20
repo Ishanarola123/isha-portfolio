@@ -139,6 +139,7 @@
     {
       "id": 1,
       "title": "ESAI Work",
+      "category": "Admin & Analytics Portal",
       "company": "Narola Infotech Solutions LLP",
       "teamSize": 3,
       "technologies": [
@@ -172,6 +173,7 @@
     {
       "id": 2,
       "title": "RECOUPLE",
+      "category": "Energy Management & ESG",
       "company": "Narola Infotech Solutions LLP",
       "teamSize": 5,
       "technologies": [
@@ -215,6 +217,7 @@
     {
       "id": 3,
       "title": "Shipnavi",
+      "category": "E-Commerce & Bidding",
       "company": "Narola Infotech Solutions LLP",
       "teamSize": 3,
       "technologies": [
@@ -249,6 +252,7 @@
     {
       "id": 4,
       "title": "Techeeta",
+      "category": "Real-Time Game Analytics",
       "company": "Narola Infotech Solutions LLP",
       "teamSize": 3,
       "technologies": [
@@ -291,6 +295,7 @@
     {
       "id": 5,
       "title": "ESAI Jobs",
+      "category": "Job Search Platform",
       "company": "Narola Infotech Solutions LLP",
       "teamSize": 2,
       "technologies": [
@@ -320,7 +325,8 @@
     },
     {
       "id": 6,
-      "title": "Diamond Factory Management System",
+      "title": "Vantage",
+      "category": "Workforce & Payroll System",
       "company": "Radhe Diamond",
       "teamSize": 1,
       "technologies": [
@@ -335,7 +341,7 @@
         "PDF Export",
         "CSV Export"
       ],
-      "liveUrl": "https://diamond-web-nu.vercel.app/report",
+      "liveUrl": "https://diamond-web-nu.vercel.app",
       "description": "A comprehensive workforce and payroll management system developed for a diamond manufacturing business to digitize daily production tracking, employee management, salary calculation, withdrawals, and monthly payroll reporting. The application automates manual payroll processes, improves operational efficiency, and provides detailed reporting with export capabilities.",
       "features": [
         "Secure admin authentication and protected dashboard",

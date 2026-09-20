@@ -29,11 +29,14 @@ export interface Experience {
 export interface Project {
   id: number;
   title: string;
+  category?: string;
   company: string;
   teamSize: number;
   technologies: string[];
   liveUrl?: string;
   stageUrl?: string;
+  testUrl?: string;
+  marketingUrl?: string;
   description: string;
   features: string[];
   status?: "Live" | "Completed" | "In Development" | string;
